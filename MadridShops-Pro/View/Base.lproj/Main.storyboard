@@ -13,7 +13,7 @@
         <!--Madrid Shops - PRO-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Madrid Shops - PRO" id="BYZ-38-t0r" customClass="ViewController" customModule="MadridShops_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Madrid Shops - PRO" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,7 @@
         <!--Shops-->
         <scene sceneID="4S9-Yj-ABc">
             <objects>
-                <viewController title="Shops" id="YQH-Jp-nWt" sceneMemberID="viewController">
+                <viewController title="Shops" id="YQH-Jp-nWt" customClass="ShopsListVC" customModule="MadridShops_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ajg-mM-z0D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCell" id="geo-Mv-dTN">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopCell" id="geo-Mv-dTN" customClass="ShopCell" customModule="MadridShops_Pro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -116,6 +116,11 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="shopHoursCell" destination="zOD-3h-nxM" id="cz8-av-ZJP"/>
+                                            <outlet property="shopImageCell" destination="W7y-EC-KQU" id="znj-Ew-WqQ"/>
+                                            <outlet property="shopNameCell" destination="8d3-oc-H6D" id="4jg-Ab-deW"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -135,6 +140,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Shops" id="rgI-Qb-E7V"/>
                     <connections>
+                        <outlet property="shopsCollectionView" destination="yLN-Tg-cIm" id="qbP-h0-dvI"/>
+                        <outlet property="shopsMap" destination="YzW-r0-dnW" id="X4l-RZ-bKz"/>
                         <segue destination="1zo-7h-Fnc" kind="show" identifier="SegueShopDetail" id="PxJ-W4-HGq"/>
                     </connections>
                 </viewController>
@@ -145,7 +152,7 @@
         <!--ShopName-->
         <scene sceneID="LQP-W2-oP4">
             <objects>
-                <viewController title="ShopName" id="1zo-7h-Fnc" sceneMemberID="viewController">
+                <viewController title="ShopName" id="1zo-7h-Fnc" customClass="ShopDetailVC" customModule="MadridShops_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9op-Wk-OAa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1020"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,7 +193,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sD3-EM-DgL">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sD3-EM-DgL">
                                                 <rect key="frame" x="8" y="686" width="359" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -241,7 +248,7 @@
         <!--Activities-->
         <scene sceneID="uRI-EY-0QC">
             <objects>
-                <viewController title="Activities" id="sca-KJ-hfB" sceneMemberID="viewController">
+                <viewController title="Activities" id="sca-KJ-hfB" customClass="ActivityListVC" customModule="MadridShops_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tDp-Q4-zs6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,7 +340,7 @@
         <!--ActivityName-->
         <scene sceneID="KUh-9B-oDV">
             <objects>
-                <viewController title="ActivityName" id="SKg-tC-JaS" sceneMemberID="viewController">
+                <viewController title="ActivityName" id="SKg-tC-JaS" customClass="ActivityDetailVC" customModule="MadridShops_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TYo-gR-7Wf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1020"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -374,21 +381,21 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T46-DR-6dJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T46-DR-6dJ">
                                                 <rect key="frame" x="8" y="686" width="359" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="shopMailingToSendMail@mailingShop.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyE-Xh-MNV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="activityMailingToSendMail@mailingactivity.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyE-Xh-MNV">
                                                 <rect key="frame" x="40" y="558" width="300" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="http://www.shopWebDirection/shop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJi-3R-EBG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="http://www.activityWebDirection/activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJi-3R-EBG">
                                                 <rect key="frame" x="40" y="512" width="300" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>

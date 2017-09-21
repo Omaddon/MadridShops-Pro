@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ActivityListVC.swift
 //  MadridShops-Pro
 //
 //  Created by MIGUEL JARDÓN PEINADO on 21/9/17.
@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ActivityListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-}
 
+    }
+
+
+
+}
