@@ -82,10 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				8CB49E971F73CEBF00A64112 /* AppDelegate.swift */,
-				8CB49E991F73CEBF00A64112 /* ViewController.swift */,
-				8CB49E9B1F73CEBF00A64112 /* Main.storyboard */,
-				8CB49E9E1F73CEBF00A64112 /* Assets.xcassets */,
-				8CB49EA01F73CEBF00A64112 /* LaunchScreen.storyboard */,
+				8CB49EBA1F73FA6D00A64112 /* Utils */,
+				8CB49EBB1F73FA7F00A64112 /* Assets */,
+				8CB49EBE1F73FAA700A64112 /* Model */,
+				8CB49EBD1F73FA9A00A64112 /* View */,
+				8CB49EBC1F73FA8F00A64112 /* Controller */,
 				8CB49EA31F73CEBF00A64112 /* Info.plist */,
 			);
 			path = "MadridShops-Pro";
@@ -106,6 +107,77 @@
 				8CB49EB81F73CEE200A64112 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CB49EBA1F73FA6D00A64112 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8CB49EBB1F73FA7F00A64112 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8CB49E9E1F73CEBF00A64112 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8CB49EBC1F73FA8F00A64112 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CB49E991F73CEBF00A64112 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8CB49EBD1F73FA9A00A64112 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CB49E9B1F73CEBF00A64112 /* Main.storyboard */,
+				8CB49EA01F73CEBF00A64112 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CB49EBE1F73FAA700A64112 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CB49EC11F73FAC700A64112 /* Mappers */,
+				8CB49EC01F73FABD00A64112 /* JSON Parser */,
+				8CB49EBF1F73FAAC00A64112 /* Interactors */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8CB49EBF1F73FAAC00A64112 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				8CB49EC21F73FAD500A64112 /* Cache Interactors */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		8CB49EC01F73FABD00A64112 /* JSON Parser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "JSON Parser";
+			sourceTree = "<group>";
+		};
+		8CB49EC11F73FAC700A64112 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		8CB49EC21F73FAD500A64112 /* Cache Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Cache Interactors";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
