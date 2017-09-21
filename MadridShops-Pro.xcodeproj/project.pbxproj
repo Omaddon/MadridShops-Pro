@@ -13,6 +13,7 @@
 		8CB49E9F1F73CEBF00A64112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB49E9E1F73CEBF00A64112 /* Assets.xcassets */; };
 		8CB49EA21F73CEBF00A64112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB49EA01F73CEBF00A64112 /* LaunchScreen.storyboard */; };
 		8CB49EAD1F73CEBF00A64112 /* MadridShops_ProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB49EAC1F73CEBF00A64112 /* MadridShops_ProTests.swift */; };
+		8CB49EB91F73CEE200A64112 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB49EB81F73CEE200A64112 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		8CB49EA81F73CEBF00A64112 /* MadridShops-ProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MadridShops-ProTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB49EAC1F73CEBF00A64112 /* MadridShops_ProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadridShops_ProTests.swift; sourceTree = "<group>"; };
 		8CB49EAE1F73CEBF00A64112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB49EB81F73CEE200A64112 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB49EB91F73CEE200A64112 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 				8CB49E961F73CEBF00A64112 /* MadridShops-Pro */,
 				8CB49EAB1F73CEBF00A64112 /* MadridShops-ProTests */,
 				8CB49E951F73CEBF00A64112 /* Products */,
+				8CB49EB71F73CEE200A64112 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +98,14 @@
 				8CB49EAE1F73CEBF00A64112 /* Info.plist */,
 			);
 			path = "MadridShops-ProTests";
+			sourceTree = "<group>";
+		};
+		8CB49EB71F73CEE200A64112 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CB49EB81F73CEE200A64112 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +159,11 @@
 					8CB49E931F73CEBF00A64112 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8CB49EA71F73CEBF00A64112 = {
 						CreatedOnToolsVersion = 9.0;
@@ -356,6 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9A452NB722;
 				INFOPLIST_FILE = "MadridShops-Pro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mjp.MadridShops-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,6 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9A452NB722;
 				INFOPLIST_FILE = "MadridShops-Pro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mjp.MadridShops-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
