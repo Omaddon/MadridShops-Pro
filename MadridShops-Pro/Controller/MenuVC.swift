@@ -12,7 +12,8 @@ import CoreData
 
 class MenuVC: UIViewController {
 
-    var context: NSManagedObjectContext?
+    var context: NSManagedObjectContext!
+    var userInteractor = UserSettingsInteractor()
     
     @IBOutlet weak var shopsButton: UIButton!
     @IBOutlet weak var activitiesButton: UIButton!
@@ -22,9 +23,48 @@ class MenuVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        activityView.isHidden = true
+        
+        self.userInteractor.executeOnce {
+            activityView.isHidden = false
+            activityView.startAnimating()
+            shopsButton.isEnabled = false
+            shopsButton.isHidden = true
+            activitiesButton.isEnabled = false
+            activitiesButton.isHidden = true
+            
+            initializeData()
+        }
         
     }
 
+    
+    func initializeData() {
+        
+        let downloadShopsInteractor: DownloadShopsInteractorProtocol = DownloadShopsInteractorNSURLSession()
+        
+        downloadShopsInteractor.execute { (shops: Shops) in
+            
+            let cacheInteractor = CacheShopsInteractorCoreData()
+            cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
+                
+                self.userInteractor.executedOnceAlready()
+                
+                self.activityView.stopAnimating()
+                self.activityView.isHidden = true
+                
+                self.shopsButton.isHidden = false
+                self.shopsButton.isEnabled = true
+                
+                self.activitiesButton.isHidden = false
+                self.activitiesButton.isEnabled = true
+                
+            }, onError: { (error: Error) in
+                
+            })
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

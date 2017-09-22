@@ -10,10 +10,12 @@ import UIKit
 
 class ShopDetailVC: UIViewController {
 
+    var shop: Shop!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.title = self.shop.name
     }
 
 }

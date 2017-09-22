@@ -11,6 +11,7 @@
         <attribute name="logo" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="logoURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mapImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="openingHours_en" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="openingHours_es" optional="YES" attributeType="String" syncable="YES"/>
@@ -28,6 +29,7 @@
         <attribute name="logo" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="logoURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mapImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="openingHours_en" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="openingHours_es" optional="YES" attributeType="String" syncable="YES"/>
@@ -35,7 +37,7 @@
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ActivityCD" positionX="-54" positionY="99" width="128" height="270"/>
-        <element name="ShopCD" positionX="-63" positionY="-18" width="128" height="270"/>
+        <element name="ActivityCD" positionX="-54" positionY="99" width="128" height="285"/>
+        <element name="ShopCD" positionX="-63" positionY="-18" width="128" height="285"/>
     </elements>
 </model>

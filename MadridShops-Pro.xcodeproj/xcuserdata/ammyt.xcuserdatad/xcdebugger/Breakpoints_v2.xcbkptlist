@@ -139,13 +139,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             condition = "true"
-            continueAfterRunningActions = "No"
-            filePath = "MadridShops-Pro/Controller/ShopsListVC.swift"
-            timestampString = "527732938.028527"
+            continueAfterRunningActions = "Yes"
+            filePath = "MadridShops-Pro/Controller/MenuVC.swift"
+            timestampString = "527738037.414497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "initializeData()"
             landmarkType = "7">
             <Actions>
@@ -157,38 +157,58 @@
                   </ActionContent>
                </BreakpointActionProxy>
             </Actions>
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (MadridShops_Pro.Shops) -&gt; () in MadridShops_Pro.ShopsListVC.initializeData() -&gt; ()"
-                  moduleName = "MadridShops-Pro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ammyt/Bootcamp_code/iOS/Bootcamp/iOS_Avanzado/PRACTICA/MadridShops-Pro/MadridShops-Pro/Controller/ShopsListVC.swift"
-                  timestampString = "527732938.226944"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "237">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Error) -&gt; () in closure #1 (MadridShops_Pro.Shops) -&gt; () in MadridShops_Pro.ShopsListVC.initializeData() -&gt; ()"
-                  moduleName = "MadridShops-Pro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ammyt/Bootcamp_code/iOS/Bootcamp/iOS_Avanzado/PRACTICA/MadridShops-Pro/MadridShops-Pro/Controller/ShopsListVC.swift"
-                  timestampString = "527732938.231274"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            condition = "true"
+            continueAfterRunningActions = "No"
+            filePath = "MadridShops-Pro/Model/Interactors/UserSettingsInteractor.swift"
+            timestampString = "527738037.414687"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "deviceLanguage()"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "&#x2757;&#xfe0f;Comprobar idioma."
+                     conveyanceType = "0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            condition = "true"
+            continueAfterRunningActions = "No"
+            filePath = "MadridShops-Pro/Model/Mappers/MapShops.swift"
+            timestampString = "527738248.13415"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "mapShopIntoShopCD(context:shop:)"
+            landmarkType = "9">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "&#x2757;&#xfe0f;Terminar de mapear el ShopCD"
+                     conveyanceType = "0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

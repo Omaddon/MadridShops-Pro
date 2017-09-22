@@ -23,6 +23,7 @@ func mapShopIntoShopCD(context: NSManagedObjectContext,
     // shopCD.image =
     shopCD.logoURL          = shop.logo
     // shopCD.logo =
+    // shopCD.mapImage =
     shopCD.latitude         = shop.latitude ?? 0.0
     shopCD.longitude        = shop.longitude ?? 0.0
     shopCD.name             = shop.name
