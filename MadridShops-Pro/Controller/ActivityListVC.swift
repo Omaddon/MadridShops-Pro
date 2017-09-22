@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class ActivityListVC: UIViewController {
+    
+    var context: NSManagedObjectContext!
 
     override func viewDidLoad() {
         super.viewDidLoad()

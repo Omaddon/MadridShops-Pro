@@ -13,7 +13,7 @@
         <!--Madrid Shops - PRO-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Madrid Shops - PRO" id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController title="Madrid Shops - PRO" id="BYZ-38-t0r" customClass="MenuVC" customModule="MadridShops_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,6 +56,10 @@
                                     <segue destination="sca-KJ-hfB" kind="show" identifier="SegueActivities" id="7ID-CF-OIl"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Erd-ZU-rCA">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.89003986120223999" green="0.23870670795440674" blue="0.19441381096839905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,6 +67,11 @@
                     <navigationItem key="navigationItem" title="Madrid Shops - PRO" id="nqc-5L-OsV">
                         <barButtonItem key="backBarButtonItem" title="Menu" id="ryC-xI-ax7"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activitiesButton" destination="e82-bB-ncw" id="kgC-yv-jX9"/>
+                        <outlet property="activityView" destination="Erd-ZU-rCA" id="UVE-Sk-xUh"/>
+                        <outlet property="shopsButton" destination="K3a-tr-V9Y" id="1gG-We-ome"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

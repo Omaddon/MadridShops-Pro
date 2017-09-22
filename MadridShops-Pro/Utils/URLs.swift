@@ -8,5 +8,5 @@
 
 import Foundation
 
-public let shopsURL         =   "http://madrid-shops.com/json_new/getShops.php"
-public let activitiesURL    =   "http://madrid-shops.com/json_new/getActivities.php"
+public let shopsURL         =   "https://madrid-shops.com/json_new/getShops.php"
+public let activitiesURL    =   "https://madrid-shops.com/json_new/getActivities.php"
