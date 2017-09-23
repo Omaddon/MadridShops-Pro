@@ -267,6 +267,16 @@
                         <viewLayoutGuide key="safeArea" id="dwB-s7-gi5"/>
                     </view>
                     <size key="freeformSize" width="375" height="1020"/>
+                    <connections>
+                        <outlet property="imageView" destination="IU5-lv-amw" id="ORs-Nx-Lne"/>
+                        <outlet property="mapImage" destination="d3C-Nn-7gR" id="qKp-Pm-ISX"/>
+                        <outlet property="shopAddress" destination="sD3-EM-DgL" id="0va-J0-rGY"/>
+                        <outlet property="shopDescription" destination="J8I-gp-8Vi" id="J8O-gd-7a3"/>
+                        <outlet property="shopEmail" destination="Xao-pT-lj4" id="NZC-0Q-rdg"/>
+                        <outlet property="shopHours" destination="09i-Sc-7EL" id="XSv-x9-NKm"/>
+                        <outlet property="shopSite" destination="Seq-6g-krG" id="nhl-N7-P2G"/>
+                        <outlet property="shopTelephone" destination="VKE-Fa-Ksa" id="mUk-Fa-XhK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBi-kW-ajW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

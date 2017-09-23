@@ -28,7 +28,7 @@ class ShopsListVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueShopDetail" {
             let vc = segue.destination as! ShopDetailVC
-            vc.shop = mapShopCDIntoShop(shopCD: sender as! ShopCD)
+            vc.shopCD = sender as! ShopCD
         }
     }
     

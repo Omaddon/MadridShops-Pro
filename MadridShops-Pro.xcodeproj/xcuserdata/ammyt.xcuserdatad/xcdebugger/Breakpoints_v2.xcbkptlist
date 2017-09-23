@@ -10,32 +10,6 @@
             ignoreCount = "0"
             condition = "true"
             continueAfterRunningActions = "Yes"
-            filePath = "MadridShops-Pro/Model/Interactors/DownloadShopsInteractorNSURLSession.swift"
-            timestampString = "527880729.190678"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "execute(onSuccess:onError:)"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&#x2757;&#xfe0f;Add error message to user: disable Internet"
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "true"
-            continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/View/ShopCell.swift"
             timestampString = "527874401.462086"
             startingColumnNumber = "9223372036854775807"
@@ -141,11 +115,11 @@
             condition = "true"
             continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/Model/Mappers/MapShops.swift"
-            timestampString = "527880729.190999"
+            timestampString = "527885683.936604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "downloadAndCacheImage(urlString:)"
             landmarkType = "9">
             <Actions>
@@ -167,7 +141,7 @@
             condition = "true"
             continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/Controller/MenuVC.swift"
-            timestampString = "527880729.1911"
+            timestampString = "527881456.255429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
