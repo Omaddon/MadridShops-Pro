@@ -60,6 +60,23 @@
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-bj-JuZ">
+                                <rect key="frame" x="62" y="558" width="250.00000000000003" height="63.000000000000028"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98945361379999996" green="0.99600595240000001" blue="0.99949425459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Reload">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reloadData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="izV-xc-3E1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.89003986120223999" green="0.23870670795440674" blue="0.19441381096839905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -70,6 +87,7 @@
                     <connections>
                         <outlet property="activitiesButton" destination="e82-bB-ncw" id="kgC-yv-jX9"/>
                         <outlet property="activityView" destination="Erd-ZU-rCA" id="UVE-Sk-xUh"/>
+                        <outlet property="reloadButton" destination="ek6-bj-JuZ" id="zX3-Xm-ulp"/>
                         <outlet property="shopsButton" destination="K3a-tr-V9Y" id="1gG-We-ome"/>
                     </connections>
                 </viewController>

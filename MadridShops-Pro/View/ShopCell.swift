@@ -15,11 +15,16 @@ class ShopCell: UICollectionViewCell {
     @IBOutlet weak var shopHoursCell: UILabel!
     @IBOutlet weak var shopImageCell: UIImageView!
     
-    func refresh(shop: Shop) {
-        self.shopNameCell.text = shop.name
-        self.shopHoursCell.text = shop.openingHours_es
+    func refresh(shopCD: ShopCD) {
+        self.shopNameCell.text = shopCD.name
+        self.shopHoursCell.text = shopCD.openingHours_en
         
-        shop.logo.loadImageNSURLSession(into: shopImageCell)
+        if let logo = shopCD.logo {
+            self.shopImageCell.image = UIImage(data: logo)
+        } else {
+            self.shopImageCell.image = #imageLiteral(resourceName: "no_image")
+        }
+        
     }
     
 }

@@ -6,12 +6,12 @@
 //  Copyright © 2017 Ammyt. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class DownloadShopsInteractorNSURLSession: DownloadShopsInteractorProtocol {
     
-    func execute(onSuccess: @escaping (Shops) -> Void, onError: ((Error) -> Void)?) {
+    func execute(onSuccess: @escaping (Shops) -> Void, onError: (() -> Void)?) {
         
         let session = URLSession.shared
         
@@ -21,7 +21,7 @@ class DownloadShopsInteractorNSURLSession: DownloadShopsInteractorProtocol {
                 if error != nil {
                     
                     if let myError = onError {
-                        myError(error!)
+                        myError()
                     }
                 } else {
                     
@@ -34,9 +34,11 @@ class DownloadShopsInteractorNSURLSession: DownloadShopsInteractorProtocol {
                 }
             })
             task.resume()
+        } else {
+            if let myError = onError {
+                myError()
+            }
         }
-        
-        
     }
     
     func execute(onSuccess: @escaping (Shops) -> Void) {

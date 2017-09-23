@@ -17,6 +17,7 @@ class MenuVC: UIViewController {
     
     @IBOutlet weak var shopsButton: UIButton!
     @IBOutlet weak var activitiesButton: UIButton!
+    @IBOutlet weak var reloadButton: UIButton!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     
     
@@ -24,26 +25,29 @@ class MenuVC: UIViewController {
         super.viewDidLoad()
         
         activityView.isHidden = true
+        reloadButton.isHidden = true
+        reloadButton.isEnabled = false
         
         self.userInteractor.executeOnce {
-            activityView.isHidden = false
-            activityView.startAnimating()
-            shopsButton.isEnabled = false
-            shopsButton.isHidden = true
-            activitiesButton.isEnabled = false
-            activitiesButton.isHidden = true
-            
             initializeData()
         }
-        
     }
 
     
     func initializeData() {
         
+        activityView.isHidden = false
+        activityView.startAnimating()
+        shopsButton.isEnabled = false
+        shopsButton.isHidden = true
+        activitiesButton.isEnabled = false
+        activitiesButton.isHidden = true
+        reloadButton.isHidden = true
+        reloadButton.isEnabled = false
+       
         let downloadShopsInteractor: DownloadShopsInteractorProtocol = DownloadShopsInteractorNSURLSession()
         
-        downloadShopsInteractor.execute { (shops: Shops) in
+        downloadShopsInteractor.execute(onSuccess: { (shops: Shops) in
             
             let cacheInteractor = CacheShopsInteractorCoreData()
             cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
@@ -60,8 +64,30 @@ class MenuVC: UIViewController {
                 self.activitiesButton.isEnabled = true
                 
             }, onError: { (error: Error) in
-                
             })
+        }, onError: {
+            
+            let alert = UIAlertController(title: "Conexion Error",
+                                          message: "Unable connect to internet.",
+                                          preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok",
+                                          style: UIAlertActionStyle.default,
+                                          handler: nil))
+            
+            self.present(alert, animated: true, completion: {
+                self.activityView.stopAnimating()
+                self.activityView.isHidden = true
+                self.reloadButton.isHidden = false
+                self.reloadButton.isEnabled = true
+            })
+        })
+    }
+    
+    
+    @IBAction func reloadData(_ sender: Any) {
+        self.userInteractor.executeOnce {
+            initializeData()
         }
     }
     

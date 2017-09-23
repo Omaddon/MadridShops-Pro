@@ -20,10 +20,7 @@ func mapShopIntoShopCD(context: NSManagedObjectContext,
     shopCD.description_es   = shop.description_es
     shopCD.email            = shop.email
     shopCD.imageURL         = shop.image
-    // shopCD.image =
     shopCD.logoURL          = shop.logo
-    // shopCD.logo =
-    // shopCD.mapImage =
     shopCD.latitude         = shop.latitude ?? 0.0
     shopCD.longitude        = shop.longitude ?? 0.0
     shopCD.name             = shop.name
@@ -31,6 +28,13 @@ func mapShopIntoShopCD(context: NSManagedObjectContext,
     shopCD.openingHours_es  = shop.openingHours_es
     shopCD.telephone        = shop.telephone
     shopCD.url              = shop.url
+    
+    let serialQueue = DispatchQueue(label: "DownloadImageQueue")
+    serialQueue.sync {
+        shopCD.logo = downloadAndCacheImage(urlString: shop.logo)
+        shopCD.image = downloadAndCacheImage(urlString: shop.image)
+        // shopCD.mapImage
+    }
     
     return shopCD
 }
@@ -55,6 +59,23 @@ func mapShopCDIntoShop(shopCD: ShopCD) -> Shop {
     
     return shop
     
+}
+
+
+func downloadAndCacheImage(urlString: String) -> Data {
+    
+    var data = Data()
+    
+    if let url = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+        let myUrl = URL(string: url) {
+        do {
+            data = try Data(contentsOf: myUrl)
+            return data
+        } catch {
+            print("💩 Error al crear la UIImage con URL: " + url)
+        }
+    }
+    return data
 }
 
 

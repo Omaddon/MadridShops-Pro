@@ -12,7 +12,7 @@ import CoreData
 
 extension ShopsListVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    // MARK: - DataSource
+    // MARK: - CollectionViewDataSource
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return shopFetchedResultsController(context: context).sections?.count ?? 0
@@ -28,7 +28,7 @@ extension ShopsListVC: UICollectionViewDelegate, UICollectionViewDataSource {
                                                       for: indexPath) as! ShopCell
         
         let shopCD = shopFetchedResultsController(context: context).object(at: indexPath)
-        cell.refresh(shop: mapShopCDIntoShop(shopCD: shopCD))
+        cell.refresh(shopCD: shopCD)
         
         return cell
     }
