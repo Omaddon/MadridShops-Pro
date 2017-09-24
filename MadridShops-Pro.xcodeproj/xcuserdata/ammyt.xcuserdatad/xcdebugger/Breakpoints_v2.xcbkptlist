@@ -61,35 +61,9 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             condition = "true"
-            continueAfterRunningActions = "Yes"
-            filePath = "MadridShops-Pro/Model/Interactors/Cache Interactors/CacheShopsInteractorCoreData.swift"
-            timestampString = "527872719.219611"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "execute(shops:context:onSuccess:onError:)"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&#x2757;&#xfe0f;Controlar error en el cacheado."
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "true"
             continueAfterRunningActions = "No"
             filePath = "MadridShops-Pro/Model/Interactors/UserSettingsInteractor.swift"
-            timestampString = "527877607.418495"
+            timestampString = "527937269.167212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -115,7 +89,7 @@
             condition = "true"
             continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/Model/Mappers/MapShops.swift"
-            timestampString = "527885683.936604"
+            timestampString = "527946461.583957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -140,19 +114,97 @@
             ignoreCount = "0"
             condition = "true"
             continueAfterRunningActions = "Yes"
-            filePath = "MadridShops-Pro/Controller/MenuVC.swift"
-            timestampString = "527881456.255429"
+            filePath = "MadridShops-Pro/Controller/ShopsListVC+MapKit.swift"
+            timestampString = "527946461.584805"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "loadAnnotation(_:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "&#x2757;&#xfe0f;Controlar idioma (openingHours) en la Annotation."
+                     conveyanceType = "0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            condition = "true"
+            continueAfterRunningActions = "Yes"
+            filePath = "MadridShops-Pro/Controller/ShopsListVC+MapKit.swift"
+            timestampString = "527946461.585341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "&#x2757;&#xfe0f;A&#xf1;adir opci&#xf3;n de centrar Mapa en usuario."
+                     conveyanceType = "0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            condition = "true"
+            continueAfterRunningActions = "Yes"
+            filePath = "MadridShops-Pro/Model/JSON Parser/JsonParser.swift"
+            timestampString = "527947002.693125"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "parseShops(_:)"
+            landmarkType = "9">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "&#x2757;&#xfe0f;Controlar parseo de coordenadas &quot;rotas/raras&quot;."
+                     conveyanceType = "0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            condition = "true"
+            continueAfterRunningActions = "Yes"
+            filePath = "MadridShops-Pro/Controller/MenuVC.swift"
+            timestampString = "527947002.693597"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "initializeData()"
             landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
                   <ActionContent
-                     message = "&#x2757;&#xfe0f;Configurar mensajes en funci&#xf3;n del idoma."
+                     message = "&#x2757;&#xfe0f;Controlar idioma."
                      conveyanceType = "0">
                   </ActionContent>
                </BreakpointActionProxy>

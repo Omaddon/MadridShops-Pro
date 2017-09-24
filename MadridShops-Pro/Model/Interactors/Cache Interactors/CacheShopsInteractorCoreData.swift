@@ -14,7 +14,7 @@ class CacheShopsInteractorCoreData: CacheShopsInteractorProtocol {
     func execute(shops: Shops,
                  context: NSManagedObjectContext,
                  onSuccess: (Shops) -> Void,
-                 onError: ((Error) -> Void)?) {
+                 onError: (() -> Void)?) {
         
         for i in 0 ..< shops.count() {
             let shop = shops.get(index: i)
@@ -26,6 +26,10 @@ class CacheShopsInteractorCoreData: CacheShopsInteractorProtocol {
             try context.save()
             onSuccess(shops)
         } catch  {
+            
+            if let myError = onError {
+                myError()
+            }
             
         }
         

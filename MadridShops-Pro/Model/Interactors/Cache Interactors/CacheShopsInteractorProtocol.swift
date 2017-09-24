@@ -14,7 +14,7 @@ protocol CacheShopsInteractorProtocol {
     func execute(shops: Shops,
                  context: NSManagedObjectContext,
                  onSuccess: (Shops) -> Void,
-                 onError: ((Error) -> Void)?)
+                 onError: (() -> Void)?)
     
     func execute(shops: Shops,
                  context: NSManagedObjectContext,

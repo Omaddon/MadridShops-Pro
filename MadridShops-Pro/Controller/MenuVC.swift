@@ -63,24 +63,15 @@ class MenuVC: UIViewController {
                 self.activitiesButton.isHidden = false
                 self.activitiesButton.isEnabled = true
                 
-            }, onError: { (error: Error) in
+            }, onError: {
+                
+                self.showError(title: "Error caching data...", message: "An error occurs during caching data from server.")
+                
             })
         }, onError: {
             
-            let alert = UIAlertController(title: "Conexion Error",
-                                          message: "Unable connect to internet.",
-                                          preferredStyle: .alert)
+            self.showError(title: "Conexion Error", message: "Unable connect to internet.")
             
-            alert.addAction(UIAlertAction(title: "Ok",
-                                          style: UIAlertActionStyle.default,
-                                          handler: nil))
-            
-            self.present(alert, animated: true, completion: {
-                self.activityView.stopAnimating()
-                self.activityView.isHidden = true
-                self.reloadButton.isHidden = false
-                self.reloadButton.isEnabled = true
-            })
         })
     }
     
@@ -89,6 +80,26 @@ class MenuVC: UIViewController {
         self.userInteractor.executeOnce {
             initializeData()
         }
+    }
+    
+    
+    func showError(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok",
+                                      style: UIAlertActionStyle.default,
+                                      handler: nil))
+        
+        self.present(alert, animated: true, completion: {
+            self.activityView.stopAnimating()
+            self.activityView.isHidden = true
+            self.reloadButton.isHidden = false
+            self.reloadButton.isEnabled = true
+        })
+        
     }
     
     
