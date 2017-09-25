@@ -14,10 +14,24 @@ class Annotation: NSObject, MKAnnotation {
     var title: String?
     var subtitle: String?
     
-    init(coordinate: CLLocationCoordinate2D, title: String? = "", subtitle: String? = "") {
+    var shopCD: ShopCD
+    
+    init(coordinate: CLLocationCoordinate2D,
+         title: String? = "",
+         subtitle: String? = "",
+         shopCD: ShopCD) {
+        
         self.coordinate = coordinate
         self.title = title
         self.subtitle = subtitle
+        
+        self.shopCD = shopCD
+    }
+    
+    func getShopCD() -> ShopCD {
+        return shopCD
     }
     
 }
+
+

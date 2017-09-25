@@ -37,7 +37,7 @@
             condition = "true"
             continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/Controller/ShopsListVC+MapKit.swift"
-            timestampString = "528033055.413831"
+            timestampString = "528048186.147498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -63,7 +63,7 @@
             condition = "true"
             continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/Model/JSON Parser/JsonParser.swift"
-            timestampString = "527993192.892452"
+            timestampString = "528048186.147916"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -75,6 +75,32 @@
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
                   <ActionContent
                      message = "&#x2757;&#xfe0f;Controlar error al parsear JSON."
+                     conveyanceType = "0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            condition = "true"
+            continueAfterRunningActions = "Yes"
+            filePath = "MadridShops-Pro/Controller/ShopsListVC+MapKit.swift"
+            timestampString = "528048186.14799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "mapView(_:viewFor:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "&#x2757;&#xfe0f;Controlar error al cear la imagen de la annotation."
                      conveyanceType = "0">
                   </ActionContent>
                </BreakpointActionProxy>
