@@ -60,8 +60,12 @@ extension ShopsListVC: CLLocationManagerDelegate, MKMapViewDelegate {
             
             let shopCD = (annotation as! Annotation).getShopCD()
             
-            //let image = UIImage(data: shopCD.logo!)
-            let image = #imageLiteral(resourceName: "no_image")
+            let image: UIImage
+            if let logo = shopCD.logo {
+                image = UIImage(data: logo)!
+            } else {
+                image = #imageLiteral(resourceName: "no_image")
+            }
             
             let rigthButton = UIButton(type: .detailDisclosure)
             let leftButton = UIImageView(image: image)
