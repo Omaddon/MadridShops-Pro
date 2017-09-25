@@ -40,6 +40,7 @@
 		8CB49EAD1F73CEBF00A64112 /* MadridShops_ProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB49EAC1F73CEBF00A64112 /* MadridShops_ProTests.swift */; };
 		8CB49EB91F73CEE200A64112 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB49EB81F73CEE200A64112 /* MapKit.framework */; };
 		8CC0A53A1F787CC9009F799F /* LanguageDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC0A5391F787CC9009F799F /* LanguageDevice.swift */; };
+		8CD0C7AC1F7908F700693B78 /* String+Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0C7AB1F7908F700693B78 /* String+Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		8CB49EAE1F73CEBF00A64112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CB49EB81F73CEE200A64112 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8CC0A5391F787CC9009F799F /* LanguageDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDevice.swift; sourceTree = "<group>"; };
+		8CD0C7AB1F7908F700693B78 /* String+Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Language.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				8C3413FA1F743F0D00DE12F5 /* URLs.swift */,
 				8C757E4C1F745115003B6E48 /* String+Image.swift */,
+				8CD0C7AB1F7908F700693B78 /* String+Language.swift */,
 				8C757E4E1F747FE5003B6E48 /* CoreDataStack.swift */,
 				8C8175C91F74965100BF9DF8 /* FetchedResultsController.swift */,
 				8C08DB371F77C0DA000697DF /* Annotation.swift */,
@@ -393,6 +396,7 @@
 				8C3413FD1F74472F00DE12F5 /* JsonParser.swift in Sources */,
 				8C3413F21F74380800DE12F5 /* ShopsListVC+CollectionVC.swift in Sources */,
 				8C3413F01F7435D800DE12F5 /* ActivityDetailVC.swift in Sources */,
+				8CD0C7AC1F7908F700693B78 /* String+Language.swift in Sources */,
 				8CB49E981F73CEBF00A64112 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

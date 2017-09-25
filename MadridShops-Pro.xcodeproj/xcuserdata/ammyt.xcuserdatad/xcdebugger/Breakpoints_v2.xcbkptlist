@@ -37,7 +37,7 @@
             condition = "true"
             continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/Controller/ShopsListVC+MapKit.swift"
-            timestampString = "527993192.892075"
+            timestampString = "528033055.413831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"

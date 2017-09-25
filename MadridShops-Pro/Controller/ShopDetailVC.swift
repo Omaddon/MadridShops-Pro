@@ -49,15 +49,8 @@ class ShopDetailVC: UIViewController {
         shopEmail.text = shopCD.email
         shopTelephone.text = shopCD.telephone
         shopAddress.text = shopCD.address
-        
-        if deviceLanguage() == DeviceLanguageTypes.Es {
-            shopHours.text = shopCD.openingHours_es
-            shopDescription.text = shopCD.description_es
-        } else {
-            shopHours.text = shopCD.openingHours_en
-            shopDescription.text = shopCD.description_en
-        }
-        
+        shopHours.text?.openingLanguage(shopCD)
+        shopDescription.text.descriptionLanguage(shopCD)        
     }
 
 }

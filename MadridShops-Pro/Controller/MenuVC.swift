@@ -37,19 +37,9 @@ class MenuVC: UIViewController {
 
     
     func languageNamesOfButtons() {
-        
-        if deviceLanguage() == DeviceLanguageTypes.Es {
-            
-            self.shopsButton.setTitle("Tiendas", for: UIControlState.normal)
-            self.activitiesButton.setTitle("Actividades", for: UIControlState.normal)
-            self.reloadButton.setTitle("Recargar", for: UIControlState.normal)
-            
-        } else {
-
-            self.shopsButton.setTitle("Shops", for: UIControlState.normal)
-            self.activitiesButton.setTitle("Activities", for: UIControlState.normal)
-            self.reloadButton.setTitle("Reload", for: UIControlState.normal)
-        }
+        self.shopsButton.setTitleButtonShops()
+        self.activitiesButton.setTitleButtonActivities()
+        self.reloadButton.setTitleButtonReload()
     }
     
     
@@ -83,37 +73,20 @@ class MenuVC: UIViewController {
                 self.activitiesButton.isEnabled = true
                 
             }, onError: {
-                
-                var title: String = ""
-                var message: String = ""
-                
-                if deviceLanguage() == DeviceLanguageTypes.Es {
-                    title = "Error guardando los datos"
-                    message = "Un error ha ocurrido durante el guardado de los datos del servidor."
-                } else {
-                    title = "Error saving data"
-                    message = "An error happened during caching data from server."
+                self.showModalCacheError {
+                    self.activityView.stopAnimating()
+                    self.activityView.isHidden = true
+                    self.reloadButton.isHidden = false
+                    self.reloadButton.isEnabled = true
                 }
-                
-                self.showError(title: title, message: message)
-                
             })
         }, onError: {
-            
-            var title: String = ""
-            var message: String = ""
-            
-            if deviceLanguage() == DeviceLanguageTypes.Es {
-                title = "Error de conexión"
-                message = "Imposible conectarse a internet."
-                
-            } else {
-                title = "Conexion error"
-                message = "Unable to connect to internet."
+            self.showModalConexionError {
+                self.activityView.stopAnimating()
+                self.activityView.isHidden = true
+                self.reloadButton.isHidden = false
+                self.reloadButton.isEnabled = true
             }
-            
-            self.showError(title: title, message: message)
-            
         })
     }
     
@@ -125,54 +98,16 @@ class MenuVC: UIViewController {
     }
     
     
-    func showError(title: String, message: String) {
-        
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Ok",
-                                      style: UIAlertActionStyle.default,
-                                      handler: nil))
-        
-        self.present(alert, animated: true, completion: {
-            self.activityView.stopAnimating()
-            self.activityView.isHidden = true
-            self.reloadButton.isHidden = false
-            self.reloadButton.isEnabled = true
-        })
-        
-    }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        var language: String = ""
-        if deviceLanguage() == DeviceLanguageTypes.Es {
-            language = "es"
-        } else {
-            language = "en"
-        }
-        
         if segue.identifier == "SegueShops" {
             let vc = segue.destination as! ShopsListVC
             vc.context = self.context
-            
-            if language == "es" {
-                vc.title = "Tiendas"
-            } else {
-                vc.title = "Shops"
-            }
+            vc.title?.setShopTitleLanguage()
             
         } else if segue.identifier == "SegueActivities" {
             let vc = segue.destination as! ActivityListVC
             vc.context = self.context
-            
-            if language == "es" {
-                vc.title = "Actividades"
-            } else {
-                vc.title = "Activities"
-            }
+            vc.title?.setActivitiesTitleLanguage()
         }
     }
 
