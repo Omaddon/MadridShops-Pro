@@ -8,14 +8,10 @@
 
 import Foundation
 
-public enum DeviceLanguageTypes {
-    case En, Es
-}
 
 protocol UserSettingsInteractorProtocol {
     func executeOnce(closure: () -> Void)
     func executedOnceAlready()
-    func deviceLanguage() -> DeviceLanguageTypes
 }
 
 
@@ -35,11 +31,6 @@ class UserSettingsInteractor: UserSettingsInteractorProtocol {
         defaults.set(true, forKey: "saved")
         defaults.synchronize()
     }
-    
-    func deviceLanguage() -> DeviceLanguageTypes {
-        return DeviceLanguageTypes.Es
-    }
-    
     
     
 }

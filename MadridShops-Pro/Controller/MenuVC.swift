@@ -28,11 +28,30 @@ class MenuVC: UIViewController {
         reloadButton.isHidden = true
         reloadButton.isEnabled = false
         
+        languageNamesOfButtons()
+        
         self.userInteractor.executeOnce {
             initializeData()
         }
     }
 
+    
+    func languageNamesOfButtons() {
+        
+        if deviceLanguage() == DeviceLanguageTypes.Es {
+            
+            self.shopsButton.setTitle("Tiendas", for: UIControlState.normal)
+            self.activitiesButton.setTitle("Actividades", for: UIControlState.normal)
+            self.reloadButton.setTitle("Recargar", for: UIControlState.normal)
+            
+        } else {
+
+            self.shopsButton.setTitle("Shops", for: UIControlState.normal)
+            self.activitiesButton.setTitle("Activities", for: UIControlState.normal)
+            self.reloadButton.setTitle("Reload", for: UIControlState.normal)
+        }
+    }
+    
     
     func initializeData() {
         
@@ -65,12 +84,35 @@ class MenuVC: UIViewController {
                 
             }, onError: {
                 
-                self.showError(title: "Error caching data...", message: "An error occurs during caching data from server.")
+                var title: String = ""
+                var message: String = ""
+                
+                if deviceLanguage() == DeviceLanguageTypes.Es {
+                    title = "Error guardando los datos"
+                    message = "Un error ha ocurrido durante el guardado de los datos del servidor."
+                } else {
+                    title = "Error saving data"
+                    message = "An error happened during caching data from server."
+                }
+                
+                self.showError(title: title, message: message)
                 
             })
         }, onError: {
             
-            self.showError(title: "Conexion Error", message: "Unable connect to internet.")
+            var title: String = ""
+            var message: String = ""
+            
+            if deviceLanguage() == DeviceLanguageTypes.Es {
+                title = "Error de conexión"
+                message = "Imposible conectarse a internet."
+                
+            } else {
+                title = "Conexion error"
+                message = "Unable to connect to internet."
+            }
+            
+            self.showError(title: title, message: message)
             
         })
     }
@@ -105,13 +147,32 @@ class MenuVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        var language: String = ""
+        if deviceLanguage() == DeviceLanguageTypes.Es {
+            language = "es"
+        } else {
+            language = "en"
+        }
+        
         if segue.identifier == "SegueShops" {
             let vc = segue.destination as! ShopsListVC
             vc.context = self.context
             
+            if language == "es" {
+                vc.title = "Tiendas"
+            } else {
+                vc.title = "Shops"
+            }
+            
         } else if segue.identifier == "SegueActivities" {
             let vc = segue.destination as! ActivityListVC
             vc.context = self.context
+            
+            if language == "es" {
+                vc.title = "Actividades"
+            } else {
+                vc.title = "Activities"
+            }
         }
     }
 

@@ -40,7 +40,7 @@ extension String {
                     }
                     
                 } else {
-                    
+                    print("💩 Error al descargar la imagen de la url: " + self)
                 }
                 
             }).resume()

@@ -17,7 +17,12 @@ class ShopCell: UICollectionViewCell {
     
     func refresh(shopCD: ShopCD) {
         self.shopNameCell.text = shopCD.name
-        self.shopHoursCell.text = shopCD.openingHours_en
+        
+        if deviceLanguage() == DeviceLanguageTypes.Es {
+            self.shopHoursCell.text = shopCD.openingHours_es
+        } else {
+            self.shopHoursCell.text = shopCD.openingHours_en
+        }
         
         if let logo = shopCD.logo {
             self.shopImageCell.image = UIImage(data: logo)

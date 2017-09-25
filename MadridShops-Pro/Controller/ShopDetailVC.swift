@@ -45,12 +45,18 @@ class ShopDetailVC: UIViewController {
             self.mapImage.image = #imageLiteral(resourceName: "no_image")
         }
         
-        shopDescription.text = shopCD.description_en
         shopSite.text = shopCD.url
         shopEmail.text = shopCD.email
-        shopHours.text = shopCD.openingHours_en
         shopTelephone.text = shopCD.telephone
         shopAddress.text = shopCD.address
+        
+        if deviceLanguage() == DeviceLanguageTypes.Es {
+            shopHours.text = shopCD.openingHours_es
+            shopDescription.text = shopCD.description_es
+        } else {
+            shopHours.text = shopCD.openingHours_en
+            shopDescription.text = shopCD.description_en
+        }
         
     }
 

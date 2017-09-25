@@ -10,90 +10,12 @@
             ignoreCount = "0"
             condition = "true"
             continueAfterRunningActions = "Yes"
-            filePath = "MadridShops-Pro/View/ShopCell.swift"
-            timestampString = "527874401.462086"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "refresh(shopCD:)"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&#x2757;&#xfe0f;Verificar el idioma"
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "true"
-            continueAfterRunningActions = "Yes"
-            filePath = "MadridShops-Pro/Utils/String+Image.swift"
-            timestampString = "527874401.462658"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "loadImageNSURLSession(into:)"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&#x2757;&#xfe0f;Controlar error en la descarga de imagen."
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "true"
-            continueAfterRunningActions = "No"
-            filePath = "MadridShops-Pro/Model/Interactors/UserSettingsInteractor.swift"
-            timestampString = "527937269.167212"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "deviceLanguage()"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&#x2757;&#xfe0f;Comprobar idioma."
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "true"
-            continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/Model/Mappers/MapShops.swift"
-            timestampString = "527946461.583957"
+            timestampString = "527993192.891441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "downloadAndCacheImage(urlString:)"
             landmarkType = "9">
             <Actions>
@@ -115,33 +37,7 @@
             condition = "true"
             continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/Controller/ShopsListVC+MapKit.swift"
-            timestampString = "527946461.584805"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "loadAnnotation(_:)"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&#x2757;&#xfe0f;Controlar idioma (openingHours) en la Annotation."
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "true"
-            continueAfterRunningActions = "Yes"
-            filePath = "MadridShops-Pro/Controller/ShopsListVC+MapKit.swift"
-            timestampString = "527946461.585341"
+            timestampString = "527993192.892075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -167,44 +63,18 @@
             condition = "true"
             continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/Model/JSON Parser/JsonParser.swift"
-            timestampString = "527947002.693125"
+            timestampString = "527993192.892452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "parseShops(_:)"
             landmarkType = "9">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
                   <ActionContent
-                     message = "&#x2757;&#xfe0f;Controlar parseo de coordenadas &quot;rotas/raras&quot;."
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "true"
-            continueAfterRunningActions = "Yes"
-            filePath = "MadridShops-Pro/Controller/MenuVC.swift"
-            timestampString = "527947002.693597"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "initializeData()"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&#x2757;&#xfe0f;Controlar idioma."
+                     message = "&#x2757;&#xfe0f;Controlar error al parsear JSON."
                      conveyanceType = "0">
                   </ActionContent>
                </BreakpointActionProxy>

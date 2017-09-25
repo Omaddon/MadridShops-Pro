@@ -22,16 +22,20 @@ func parseShops(_ data: Data) -> Shops {
             let shop = Shop(name: shopJson["name"] as! String)
             shop.description_en = shopJson["description_en"] as! String
             shop.description_es = shopJson["description_es"] as! String
-            shop.latitude = (shopJson["gps_lat"] as! NSString).floatValue
-            shop.longitude = (shopJson["gps_lon"] as! NSString).floatValue
             shop.image = shopJson["img"] as! String
             shop.logo = shopJson["logo_img"] as! String
             shop.openingHours_en = shopJson["opening_hours_en"] as! String
-            shop.description_es = shopJson["opening_hours_es"] as! String
+            shop.openingHours_es = shopJson["opening_hours_es"] as! String
             shop.address = shopJson["address"] as! String
             shop.email = shopJson["email"] as! String
             shop.url = shopJson["url"] as! String
             shop.telephone = shopJson["telephone"] as! String
+            shop.latitude = Float((shopJson["gps_lat"]! as! String)
+                .trimmingCharacters(in: .whitespaces)
+                .replacingOccurrences(of: ",", with: ""))
+            shop.longitude = Float((shopJson["gps_lon"]! as! String)
+                .trimmingCharacters(in: .whitespaces)
+                .replacingOccurrences(of: ",", with: ""))
             
             shops.add(shop: shop)
         }

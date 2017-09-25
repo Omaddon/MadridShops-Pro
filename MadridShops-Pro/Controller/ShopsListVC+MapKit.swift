@@ -23,9 +23,16 @@ extension ShopsListVC: CLLocationManagerDelegate, MKMapViewDelegate {
         let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude),
                                     longitude: CLLocationDegrees(shopCD.longitude))
         
+        var subtitle: String?
+        if deviceLanguage() == DeviceLanguageTypes.Es {
+            subtitle = shopCD.openingHours_es
+        } else {
+            subtitle = shopCD.openingHours_en
+        }
+        
         let annotation = Annotation(coordinate: shopLocation.coordinate,
                                     title: shopCD.name,
-                                    subtitle: shopCD.openingHours_en)
+                                    subtitle: subtitle)
         
         self.shopsMap.addAnnotation(annotation)
     }
