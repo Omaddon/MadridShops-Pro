@@ -1,5 +1,5 @@
 //
-//  DownloadShopsInteractorNSURLSession.swift
+//  DownloadActivitiesInteractorNSURLSession.swift
 //  MadridShops-Pro
 //
 //  Created by MIGUEL JARDÓN PEINADO on 21/9/17.
@@ -9,13 +9,13 @@
 import UIKit
 
 
-class DownloadShopsInteractorNSURLSession: DownloadShopsInteractorProtocol {
+class DownloadActivitiesInteractorNSURLSession: DownloadActivitiesInteractorProtocol {   
     
-    func execute(onSuccess: @escaping (Shops) -> Void, onError: ((String) -> Void)?) {
+    func execute(onSuccess: @escaping (Activities) -> Void, onError: ((String) -> Void)?) {
         
         let session = URLSession.shared
         
-        if let url = URL(string: shopsURL) {
+        if let url = URL(string: activitiesURL) {
             let task = session.dataTask(with: url, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
                 
                 if error != nil {
@@ -26,9 +26,9 @@ class DownloadShopsInteractorNSURLSession: DownloadShopsInteractorProtocol {
                 } else {
                     
                     if data != nil {
-                        let shops = parseShops(data!, onError)
+                        let activities = parseActivities(data!, onError)
                         OperationQueue.main.addOperation {
-                            onSuccess(shops)
+                            onSuccess(activities)
                         }
                     }
                 }
@@ -41,7 +41,7 @@ class DownloadShopsInteractorNSURLSession: DownloadShopsInteractorProtocol {
         }
     }
     
-    func execute(onSuccess: @escaping (Shops) -> Void) {
+    func execute(onSuccess: @escaping (Activities) -> Void) {
         self.execute(onSuccess: onSuccess, onError: nil)
     }
 }

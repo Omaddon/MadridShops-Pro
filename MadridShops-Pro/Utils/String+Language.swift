@@ -18,6 +18,15 @@ extension String {
             self = shopCD.openingHours_en ?? ""
         }
     }
+    
+    
+    mutating func openingLanguage(_ activityCD: ActivityCD) {
+        if deviceLanguage() == DeviceLanguageTypes.Es {
+            self = activityCD.openingHours_es ?? ""
+        } else {
+            self = activityCD.openingHours_en ?? ""
+        }
+    }
 
     
     mutating func descriptionLanguage(_ shopCD: ShopCD) {
@@ -29,6 +38,15 @@ extension String {
     }
     
     
+    mutating func descriptionLanguage(_ activityCD: ActivityCD) {
+        if deviceLanguage() == DeviceLanguageTypes.Es {
+            self = activityCD.description_es ?? ""
+        } else {
+            self = activityCD.description_en ?? ""
+        }
+    }
+    
+    
     mutating func setShopTitleLanguage() {
         if deviceLanguage() == DeviceLanguageTypes.Es {
             self = "Tiendas"
@@ -36,6 +54,7 @@ extension String {
             self = "Shops"
         }
     }
+    
     
     mutating func setActivitiesTitleLanguage() {
         if deviceLanguage() == DeviceLanguageTypes.Es {

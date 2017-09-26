@@ -1,5 +1,5 @@
 //
-//  FetchedResultsController.swift
+//  ShopFetchedResultsController.swift
 //  MadridShops-Pro
 //
 //  Created by MIGUEL JARDÓN PEINADO on 22/9/17.

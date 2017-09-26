@@ -10,18 +10,19 @@ import Foundation
 
 
 public class Activity {
-    var name:           String
-    var description_en: String = ""
-    var description_es: String = ""
-    var latitude:       Float? = nil
-    var longitude:      Float? = nil
-    var image:          String = ""
-    var logo:           String = ""
-    var openingHours:   String = ""
-    var address:        String = ""
-    var email:          String = ""
-    var url:            String = ""
-    var telephone:      String = ""
+    var name:               String
+    var description_en:     String = ""
+    var description_es:     String = ""
+    var latitude:           Float? = nil
+    var longitude:          Float? = nil
+    var image:              String = ""
+    var logo:               String = ""
+    var openingHours_en:    String = ""
+    var openingHours_es:    String = ""
+    var address:            String = ""
+    var email:              String = ""
+    var url:                String = ""
+    var telephone:          String = ""
     
     public init(name: String) {
         self.name = name

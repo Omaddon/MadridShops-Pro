@@ -1,5 +1,5 @@
 //
-//  ShopsListVC+MapKit.swift
+//  ActivityListVC+MapKit.swift
 //  MadridShops-Pro
 //
 //  Created by MIGUEL JARDÓN PEINADO on 24/9/17.
@@ -12,34 +12,34 @@ import CoreLocation
 import CoreData
 
 
-extension ShopsListVC: CLLocationManagerDelegate, MKMapViewDelegate {
+extension ActivityListVC: CLLocationManagerDelegate, MKMapViewDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // self.shopsMap.setCenter(locations.last.coordinate, animated: true)
     }
     
     
-    func loadAnnotation(_ shopCD: ShopCD) {
-        let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude),
-                                    longitude: CLLocationDegrees(shopCD.longitude))
+    func loadAnnotation(_ activityCD: ActivityCD) {
+        let activityLocation = CLLocation(latitude: CLLocationDegrees(activityCD.latitude),
+                                    longitude: CLLocationDegrees(activityCD.longitude))
         
         var subtitle: String = ""
-        subtitle.openingLanguage(shopCD)
+        subtitle.openingLanguage(activityCD)
         
-        let annotation = Annotation(coordinate: shopLocation.coordinate,
-                                    title: shopCD.name,
-                                    subtitle: subtitle,
-                                    shopCD: shopCD)
+        let annotation = AnnotationActivity(coordinate: activityLocation.coordinate,
+                                            title: activityCD.name,
+                                            subtitle: subtitle,
+                                            activityCD: activityCD)
         
-        self.shopsMap.addAnnotation(annotation)
+        self.activitiesMap.addAnnotation(annotation)
     }
     
  
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
         
-        if let shopsCD = shopFetchedResultsController(context: self.context).fetchedObjects {
-            for shopCD in shopsCD {
-                loadAnnotation(shopCD)
+        if let activitiesCD = activityFetchedResultsController(context: self.context).fetchedObjects {
+            for activityCD in activitiesCD {
+                loadAnnotation(activityCD)
             }
         }
     }
@@ -50,7 +50,7 @@ extension ShopsListVC: CLLocationManagerDelegate, MKMapViewDelegate {
             return nil
         }
         
-        let pinID = "shopPin"
+        let pinID = "activityPin"
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: pinID)
         
         if pinView == nil {
@@ -58,10 +58,10 @@ extension ShopsListVC: CLLocationManagerDelegate, MKMapViewDelegate {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: pinID)
             pinView?.canShowCallout = true
             
-            let shopCD = (annotation as! Annotation).getShopCD()
+            let activityCD = (annotation as! AnnotationActivity).getActivityCD()
             
             let image: UIImage
-            if let logo = shopCD.logo {
+            if let logo = activityCD.logo {
                 image = UIImage(data: logo)!
             } else {
                 image = #imageLiteral(resourceName: "no_image")
@@ -84,9 +84,9 @@ extension ShopsListVC: CLLocationManagerDelegate, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
-        if let annotation = view.annotation as? Annotation {
-            let shopCD = annotation.getShopCD()
-            performSegue(withIdentifier: "SegueShopDetail", sender: shopCD)
+        if let annotation = view.annotation as? AnnotationActivity {
+            let activityCD = annotation.getActivityCD()
+            performSegue(withIdentifier: "SegueActivityDetail", sender: activityCD)
         }
     }
     

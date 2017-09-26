@@ -18,5 +18,5 @@ func deviceLanguage() -> DeviceLanguageTypes {
     
     let language = Locale.current.languageCode
     
-    return language == "en" ? DeviceLanguageTypes.En : DeviceLanguageTypes.Es
+    return language == "es" ? DeviceLanguageTypes.Es : DeviceLanguageTypes.En
 }

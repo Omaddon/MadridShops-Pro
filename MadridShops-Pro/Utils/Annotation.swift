@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class Annotation: NSObject, MKAnnotation {
+class AnnotationShop: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var title: String?
     var subtitle: String?
@@ -31,7 +31,52 @@ class Annotation: NSObject, MKAnnotation {
     func getShopCD() -> ShopCD {
         return shopCD
     }
-    
 }
+
+
+class AnnotationActivity: NSObject, MKAnnotation {
+    var coordinate: CLLocationCoordinate2D
+    var title: String?
+    var subtitle: String?
+    
+    var activityCD: ActivityCD
+    
+    init(coordinate: CLLocationCoordinate2D,
+         title: String? = "",
+         subtitle: String? = "",
+         activityCD: ActivityCD) {
+        
+        self.coordinate = coordinate
+        self.title = title
+        self.subtitle = subtitle
+        
+        self.activityCD = activityCD
+    }
+    
+    func getActivityCD() -> ActivityCD {
+        return activityCD
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

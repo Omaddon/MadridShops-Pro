@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8C08DB361F77B796000697DF /* ShopsListVC+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C08DB351F77B796000697DF /* ShopsListVC+MapKit.swift */; };
 		8C08DB381F77C0DA000697DF /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C08DB371F77C0DA000697DF /* Annotation.swift */; };
+		8C2BABD01F7AB39C00838A08 /* ActivityFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BABCF1F7AB39C00838A08 /* ActivityFetchedResultsController.swift */; };
+		8C2BABD21F7ABD5C00838A08 /* DownloadActivitiesInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BABD11F7ABD5C00838A08 /* DownloadActivitiesInteractorProtocol.swift */; };
+		8C2BABD41F7ABD8F00838A08 /* DownloadActivitiesInteractorNSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BABD31F7ABD8F00838A08 /* DownloadActivitiesInteractorNSURLSession.swift */; };
 		8C3413E41F742E2800DE12F5 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3413E31F742E2800DE12F5 /* Shop.swift */; };
 		8C3413E61F742FD600DE12F5 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3413E51F742FD600DE12F5 /* Activity.swift */; };
 		8C3413E81F7430AC00DE12F5 /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3413E71F7430AC00DE12F5 /* Shops.swift */; };
@@ -22,6 +25,10 @@
 		8C3413F91F743E0500DE12F5 /* DownloadShopsInteractorNSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3413F81F743E0500DE12F5 /* DownloadShopsInteractorNSURLSession.swift */; };
 		8C3413FB1F743F0D00DE12F5 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3413FA1F743F0D00DE12F5 /* URLs.swift */; };
 		8C3413FD1F74472F00DE12F5 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3413FC1F74472F00DE12F5 /* JsonParser.swift */; };
+		8C41B4241F7AB0E900BDC1FF /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C41B4231F7AB0E900BDC1FF /* ActivityCell.swift */; };
+		8C6173941F7ACAF800071F81 /* CacheActivitiesInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6173931F7ACAF800071F81 /* CacheActivitiesInteractorProtocol.swift */; };
+		8C6173961F7ACB3900071F81 /* CacheActivitiesInteractorCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6173951F7ACB3900071F81 /* CacheActivitiesInteractorCoreData.swift */; };
+		8C6173981F7ACD1E00071F81 /* MapActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6173971F7ACD1E00071F81 /* MapActivities.swift */; };
 		8C757E4B1F744E7D003B6E48 /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C757E4A1F744E7D003B6E48 /* ShopCell.swift */; };
 		8C757E4D1F745115003B6E48 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C757E4C1F745115003B6E48 /* String+Image.swift */; };
 		8C757E4F1F747FE5003B6E48 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C757E4E1F747FE5003B6E48 /* CoreDataStack.swift */; };
@@ -29,8 +36,10 @@
 		8C757E531F748063003B6E48 /* CacheShopsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C757E521F748063003B6E48 /* CacheShopsInteractorProtocol.swift */; };
 		8C757E551F748117003B6E48 /* CacheShopsInteractorCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C757E541F748117003B6E48 /* CacheShopsInteractorCoreData.swift */; };
 		8C757E571F7481C7003B6E48 /* MapShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C757E561F7481C7003B6E48 /* MapShops.swift */; };
+		8C75CC3A1F7AAF74002FC21D /* ActivityListVC+CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75CC391F7AAF74002FC21D /* ActivityListVC+CollectionVC.swift */; };
+		8C75CC3C1F7AAFDF002FC21D /* ActivityListVC+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75CC3B1F7AAFDF002FC21D /* ActivityListVC+MapKit.swift */; };
 		8C8175C81F74918700BF9DF8 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8175C71F74918700BF9DF8 /* MenuVC.swift */; };
-		8C8175CA1F74965100BF9DF8 /* FetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8175C91F74965100BF9DF8 /* FetchedResultsController.swift */; };
+		8C8175CA1F74965100BF9DF8 /* ShopFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8175C91F74965100BF9DF8 /* ShopFetchedResultsController.swift */; };
 		8C8175CC1F749B3500BF9DF8 /* UserSettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8175CB1F749B3500BF9DF8 /* UserSettingsInteractor.swift */; };
 		8CB49E981F73CEBF00A64112 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB49E971F73CEBF00A64112 /* AppDelegate.swift */; };
 		8CB49E9A1F73CEBF00A64112 /* ShopsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB49E991F73CEBF00A64112 /* ShopsListVC.swift */; };
@@ -56,6 +65,9 @@
 /* Begin PBXFileReference section */
 		8C08DB351F77B796000697DF /* ShopsListVC+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopsListVC+MapKit.swift"; sourceTree = "<group>"; };
 		8C08DB371F77C0DA000697DF /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		8C2BABCF1F7AB39C00838A08 /* ActivityFetchedResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFetchedResultsController.swift; sourceTree = "<group>"; };
+		8C2BABD11F7ABD5C00838A08 /* DownloadActivitiesInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadActivitiesInteractorProtocol.swift; sourceTree = "<group>"; };
+		8C2BABD31F7ABD8F00838A08 /* DownloadActivitiesInteractorNSURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadActivitiesInteractorNSURLSession.swift; sourceTree = "<group>"; };
 		8C3413E31F742E2800DE12F5 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		8C3413E51F742FD600DE12F5 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		8C3413E71F7430AC00DE12F5 /* Shops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
@@ -69,6 +81,10 @@
 		8C3413F81F743E0500DE12F5 /* DownloadShopsInteractorNSURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadShopsInteractorNSURLSession.swift; sourceTree = "<group>"; };
 		8C3413FA1F743F0D00DE12F5 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		8C3413FC1F74472F00DE12F5 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
+		8C41B4231F7AB0E900BDC1FF /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		8C6173931F7ACAF800071F81 /* CacheActivitiesInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheActivitiesInteractorProtocol.swift; sourceTree = "<group>"; };
+		8C6173951F7ACB3900071F81 /* CacheActivitiesInteractorCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheActivitiesInteractorCoreData.swift; sourceTree = "<group>"; };
+		8C6173971F7ACD1E00071F81 /* MapActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapActivities.swift; sourceTree = "<group>"; };
 		8C757E4A1F744E7D003B6E48 /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
 		8C757E4C1F745115003B6E48 /* String+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
 		8C757E4E1F747FE5003B6E48 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -76,8 +92,10 @@
 		8C757E521F748063003B6E48 /* CacheShopsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheShopsInteractorProtocol.swift; sourceTree = "<group>"; };
 		8C757E541F748117003B6E48 /* CacheShopsInteractorCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheShopsInteractorCoreData.swift; sourceTree = "<group>"; };
 		8C757E561F7481C7003B6E48 /* MapShops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapShops.swift; sourceTree = "<group>"; };
+		8C75CC391F7AAF74002FC21D /* ActivityListVC+CollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityListVC+CollectionVC.swift"; sourceTree = "<group>"; };
+		8C75CC3B1F7AAFDF002FC21D /* ActivityListVC+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityListVC+MapKit.swift"; sourceTree = "<group>"; };
 		8C8175C71F74918700BF9DF8 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
-		8C8175C91F74965100BF9DF8 /* FetchedResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedResultsController.swift; sourceTree = "<group>"; };
+		8C8175C91F74965100BF9DF8 /* ShopFetchedResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFetchedResultsController.swift; sourceTree = "<group>"; };
 		8C8175CB1F749B3500BF9DF8 /* UserSettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsInteractor.swift; sourceTree = "<group>"; };
 		8CB49E941F73CEBF00A64112 /* MadridShops-Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MadridShops-Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB49E971F73CEBF00A64112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +132,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C75CC371F7AAEF2002FC21D /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				8CB49E991F73CEBF00A64112 /* ShopsListVC.swift */,
+				8C3413F11F74380800DE12F5 /* ShopsListVC+CollectionVC.swift */,
+				8C08DB351F77B796000697DF /* ShopsListVC+MapKit.swift */,
+				8C3413EB1F74351600DE12F5 /* ShopDetailVC.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		8C75CC381F7AAF06002FC21D /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				8C3413ED1F7435BA00DE12F5 /* ActivityListVC.swift */,
+				8C75CC391F7AAF74002FC21D /* ActivityListVC+CollectionVC.swift */,
+				8C75CC3B1F7AAFDF002FC21D /* ActivityListVC+MapKit.swift */,
+				8C3413EF1F7435D800DE12F5 /* ActivityDetailVC.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		8CB49E8B1F73CEBF00A64112 = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +212,8 @@
 				8C757E4C1F745115003B6E48 /* String+Image.swift */,
 				8CD0C7AB1F7908F700693B78 /* String+Language.swift */,
 				8C757E4E1F747FE5003B6E48 /* CoreDataStack.swift */,
-				8C8175C91F74965100BF9DF8 /* FetchedResultsController.swift */,
+				8C8175C91F74965100BF9DF8 /* ShopFetchedResultsController.swift */,
+				8C2BABCF1F7AB39C00838A08 /* ActivityFetchedResultsController.swift */,
 				8C08DB371F77C0DA000697DF /* Annotation.swift */,
 				8CC0A5391F787CC9009F799F /* DeviceLanguage.swift */,
 			);
@@ -191,12 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				8C8175C71F74918700BF9DF8 /* MenuVC.swift */,
-				8CB49E991F73CEBF00A64112 /* ShopsListVC.swift */,
-				8C3413F11F74380800DE12F5 /* ShopsListVC+CollectionVC.swift */,
-				8C08DB351F77B796000697DF /* ShopsListVC+MapKit.swift */,
-				8C3413EB1F74351600DE12F5 /* ShopDetailVC.swift */,
-				8C3413ED1F7435BA00DE12F5 /* ActivityListVC.swift */,
-				8C3413EF1F7435D800DE12F5 /* ActivityDetailVC.swift */,
+				8C75CC371F7AAEF2002FC21D /* Shop */,
+				8C75CC381F7AAF06002FC21D /* Activity */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,6 +244,7 @@
 				8CB49E9B1F73CEBF00A64112 /* Main.storyboard */,
 				8CB49EA01F73CEBF00A64112 /* LaunchScreen.storyboard */,
 				8C757E4A1F744E7D003B6E48 /* ShopCell.swift */,
+				8C41B4231F7AB0E900BDC1FF /* ActivityCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +270,8 @@
 				8CB49EC21F73FAD500A64112 /* Cache Interactors */,
 				8C3413F61F743CF700DE12F5 /* DownloadShopsInteractorProtocol.swift */,
 				8C3413F81F743E0500DE12F5 /* DownloadShopsInteractorNSURLSession.swift */,
+				8C2BABD11F7ABD5C00838A08 /* DownloadActivitiesInteractorProtocol.swift */,
+				8C2BABD31F7ABD8F00838A08 /* DownloadActivitiesInteractorNSURLSession.swift */,
 				8C8175CB1F749B3500BF9DF8 /* UserSettingsInteractor.swift */,
 			);
 			path = Interactors;
@@ -249,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				8C757E561F7481C7003B6E48 /* MapShops.swift */,
+				8C6173971F7ACD1E00071F81 /* MapActivities.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -258,6 +299,8 @@
 			children = (
 				8C757E521F748063003B6E48 /* CacheShopsInteractorProtocol.swift */,
 				8C757E541F748117003B6E48 /* CacheShopsInteractorCoreData.swift */,
+				8C6173931F7ACAF800071F81 /* CacheActivitiesInteractorProtocol.swift */,
+				8C6173951F7ACB3900071F81 /* CacheActivitiesInteractorCoreData.swift */,
 			);
 			path = "Cache Interactors";
 			sourceTree = "<group>";
@@ -370,9 +413,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2BABD01F7AB39C00838A08 /* ActivityFetchedResultsController.swift in Sources */,
 				8C3413F91F743E0500DE12F5 /* DownloadShopsInteractorNSURLSession.swift in Sources */,
 				8C8175CC1F749B3500BF9DF8 /* UserSettingsInteractor.swift in Sources */,
+				8C75CC3C1F7AAFDF002FC21D /* ActivityListVC+MapKit.swift in Sources */,
 				8C757E571F7481C7003B6E48 /* MapShops.swift in Sources */,
+				8C6173941F7ACAF800071F81 /* CacheActivitiesInteractorProtocol.swift in Sources */,
 				8C3413E41F742E2800DE12F5 /* Shop.swift in Sources */,
 				8C08DB381F77C0DA000697DF /* Annotation.swift in Sources */,
 				8C3413EE1F7435BA00DE12F5 /* ActivityListVC.swift in Sources */,
@@ -382,19 +428,25 @@
 				8C3413FB1F743F0D00DE12F5 /* URLs.swift in Sources */,
 				8C3413F71F743CF700DE12F5 /* DownloadShopsInteractorProtocol.swift in Sources */,
 				8C3413E81F7430AC00DE12F5 /* Shops.swift in Sources */,
+				8C2BABD21F7ABD5C00838A08 /* DownloadActivitiesInteractorProtocol.swift in Sources */,
 				8C3413F51F74397E00DE12F5 /* MadridShopsPro.xcdatamodeld in Sources */,
 				8C08DB361F77B796000697DF /* ShopsListVC+MapKit.swift in Sources */,
 				8C3413EA1F7431E400DE12F5 /* Activities.swift in Sources */,
 				8C757E4D1F745115003B6E48 /* String+Image.swift in Sources */,
+				8C41B4241F7AB0E900BDC1FF /* ActivityCell.swift in Sources */,
 				8CC0A53A1F787CC9009F799F /* DeviceLanguage.swift in Sources */,
 				8C757E531F748063003B6E48 /* CacheShopsInteractorProtocol.swift in Sources */,
 				8CB49E9A1F73CEBF00A64112 /* ShopsListVC.swift in Sources */,
+				8C75CC3A1F7AAF74002FC21D /* ActivityListVC+CollectionVC.swift in Sources */,
+				8C6173981F7ACD1E00071F81 /* MapActivities.swift in Sources */,
 				8C3413EC1F74351600DE12F5 /* ShopDetailVC.swift in Sources */,
 				8C3413E61F742FD600DE12F5 /* Activity.swift in Sources */,
-				8C8175CA1F74965100BF9DF8 /* FetchedResultsController.swift in Sources */,
+				8C2BABD41F7ABD8F00838A08 /* DownloadActivitiesInteractorNSURLSession.swift in Sources */,
+				8C8175CA1F74965100BF9DF8 /* ShopFetchedResultsController.swift in Sources */,
 				8C8175C81F74918700BF9DF8 /* MenuVC.swift in Sources */,
 				8C3413FD1F74472F00DE12F5 /* JsonParser.swift in Sources */,
 				8C3413F21F74380800DE12F5 /* ShopsListVC+CollectionVC.swift in Sources */,
+				8C6173961F7ACB3900071F81 /* CacheActivitiesInteractorCoreData.swift in Sources */,
 				8C3413F01F7435D800DE12F5 /* ActivityDetailVC.swift in Sources */,
 				8CD0C7AC1F7908F700693B78 /* String+Language.swift in Sources */,
 				8CB49E981F73CEBF00A64112 /* AppDelegate.swift in Sources */,

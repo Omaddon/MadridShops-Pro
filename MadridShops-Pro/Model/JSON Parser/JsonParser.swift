@@ -48,3 +48,68 @@ func parseShops(_ data: Data, _ onError: ((String) -> Void)?) -> Shops {
     
     return shops
 }
+
+
+
+func parseActivities(_ data: Data, _ onError: ((String) -> Void)?) -> Activities {
+    
+    let activities = Activities()
+    
+    do {
+        let jsonObject = try JSONSerialization.jsonObject(with: data,
+                                                          options: .allowFragments) as! Dictionary<String,Any>
+        let result = jsonObject["result"] as! [Dictionary<String,Any>]
+        
+        for activityJson in result {
+            let activity = Activity(name: activityJson["name"] as! String)
+            activity.description_en = activityJson["description_en"] as! String
+            activity.description_es = activityJson["description_es"] as! String
+            activity.image = activityJson["img"] as! String
+            activity.logo = activityJson["logo_img"] as! String
+            activity.openingHours_en = activityJson["opening_hours_en"] as! String
+            activity.openingHours_es = activityJson["opening_hours_es"] as! String
+            activity.address = activityJson["address"] as! String
+            activity.email = activityJson["email"] as! String
+            activity.url = activityJson["url"] as! String
+            activity.telephone = activityJson["telephone"] as! String
+            activity.latitude = Float((activityJson["gps_lat"]! as! String)
+                .trimmingCharacters(in: .whitespaces)
+                .replacingOccurrences(of: ",", with: ""))
+            activity.longitude = Float((activityJson["gps_lon"]! as! String)
+                .trimmingCharacters(in: .whitespaces)
+                .replacingOccurrences(of: ",", with: ""))
+            
+            activities.add(activity: activity)
+        }
+        
+    } catch  {
+        if let error = onError {
+            error("parseError")
+        }
+    }
+    
+    return activities
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
