@@ -74,18 +74,19 @@ class MenuVC: UIViewController {
                 
             }, onError: {
                 self.showModalCacheError {
-                    self.activityView.stopAnimating()
-                    self.activityView.isHidden = true
-                    self.reloadButton.isHidden = false
-                    self.reloadButton.isEnabled = true
+                    self.prepareReloadView()
                 }
             })
-        }, onError: {
-            self.showModalConexionError {
-                self.activityView.stopAnimating()
-                self.activityView.isHidden = true
-                self.reloadButton.isHidden = false
-                self.reloadButton.isEnabled = true
+        }, onError: { (error: String) -> Void in
+            
+            if error == "parseError" {
+                self.showModalParseError {
+                    self.prepareReloadView()
+                }
+            } else {    // urlError + conexionError
+                self.showModalConexionError {
+                    self.prepareReloadView()
+                }
             }
         })
     }
@@ -95,6 +96,14 @@ class MenuVC: UIViewController {
         self.userInteractor.executeOnce {
             initializeData()
         }
+    }
+    
+    
+    func prepareReloadView() {
+        self.activityView.stopAnimating()
+        self.activityView.isHidden = true
+        self.reloadButton.isHidden = false
+        self.reloadButton.isEnabled = true
     }
     
     

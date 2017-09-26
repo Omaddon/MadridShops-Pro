@@ -9,7 +9,7 @@
 import Foundation
 
 
-func parseShops(_ data: Data) -> Shops {
+func parseShops(_ data: Data, _ onError: ((String) -> Void)?) -> Shops {
     
     let shops = Shops()
     
@@ -41,7 +41,9 @@ func parseShops(_ data: Data) -> Shops {
         }
         
     } catch  {
-        print("💩 Error parsing JSON.")
+        if let error = onError {
+            error("parseError")
+        }
     }
     
     return shops

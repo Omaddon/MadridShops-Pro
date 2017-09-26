@@ -30,9 +30,9 @@ class ShopsListVC: UIViewController {
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.shopsMap.showsUserLocation = true
         
-        let madridLocationInitial = CLLocation(latitude: 40.41889, longitude: -3.69194)
+        let madridLocationInitial = CLLocation(latitude: 40.427319, longitude: -3.6932110000000193)
         let madridRegion = MKCoordinateRegion(center: madridLocationInitial.coordinate, span: 
-            MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+            MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
         
         self.shopsMap.setRegion(madridRegion, animated: true)
         
@@ -46,6 +46,11 @@ class ShopsListVC: UIViewController {
             let vc = segue.destination as! ShopDetailVC
             vc.shopCD = sender as! ShopCD
         }
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.locationManager.stopUpdatingHeading()
     }
     
 }

@@ -113,6 +113,24 @@ extension UIViewController {
         showErrorModal(title: title, message: message, vc: self, onCompletion: onCompletion)
     }
     
+    
+    func showModalParseError(onCompletion: @escaping () -> Void) {
+        
+        var title: String = ""
+        var message: String = ""
+        
+        if deviceLanguage() == DeviceLanguageTypes.Es {
+            title = "Error en los datos"
+            message = "Los datos descargados están corruptos."
+            
+        } else {
+            title = "Data error"
+            message = "Downloaded data is corrupt."
+        }
+        
+        showErrorModal(title: title, message: message, vc: self, onCompletion: onCompletion)
+    }
+    
 }
 
 

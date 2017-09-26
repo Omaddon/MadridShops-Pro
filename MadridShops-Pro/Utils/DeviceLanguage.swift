@@ -1,5 +1,5 @@
 //
-//  LanguageDevice.swift
+//  DeviceLanguage.swift
 //  MadridShops-Pro
 //
 //  Created by MIGUEL JARDÓN PEINADO on 25/9/17.

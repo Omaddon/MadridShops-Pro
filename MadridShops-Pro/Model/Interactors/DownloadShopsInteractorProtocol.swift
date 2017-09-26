@@ -10,6 +10,6 @@ import Foundation
 
 
 protocol DownloadShopsInteractorProtocol {
-    func execute(onSuccess: @escaping (Shops) -> Void, onError: (() -> Void)?)
+    func execute(onSuccess: @escaping (Shops) -> Void, onError: ((String) -> Void)?)
     func execute(onSuccess: @escaping (Shops) -> Void)
 }

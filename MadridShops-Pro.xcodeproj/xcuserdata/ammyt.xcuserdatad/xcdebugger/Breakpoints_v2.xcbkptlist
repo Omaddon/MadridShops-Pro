@@ -10,34 +10,8 @@
             ignoreCount = "0"
             condition = "true"
             continueAfterRunningActions = "Yes"
-            filePath = "MadridShops-Pro/Model/Mappers/MapShops.swift"
-            timestampString = "527993192.891441"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "downloadAndCacheImage(urlString:)"
-            landmarkType = "9">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&#x2757;&#xfe0f;Manejar error al descargar la imagen."
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "true"
-            continueAfterRunningActions = "Yes"
             filePath = "MadridShops-Pro/Controller/ShopsListVC+MapKit.swift"
-            timestampString = "528057883.544805"
+            timestampString = "528115044.627401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -49,58 +23,6 @@
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
                   <ActionContent
                      message = "&#x2757;&#xfe0f;A&#xf1;adir opci&#xf3;n de centrar Mapa en usuario."
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "true"
-            continueAfterRunningActions = "Yes"
-            filePath = "MadridShops-Pro/Model/JSON Parser/JsonParser.swift"
-            timestampString = "528057134.014079"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "parseShops(_:)"
-            landmarkType = "9">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&#x2757;&#xfe0f;Controlar error al parsear JSON."
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "true"
-            continueAfterRunningActions = "Yes"
-            filePath = "MadridShops-Pro/Model/Mappers/MapShops.swift"
-            timestampString = "528053518.573449"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "mapShopIntoShopCD(context:shop:)"
-            landmarkType = "9">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "&#x2757;&#xfe0f;Revisar si funcionar&#xed;a sin la serialQueue."
                      conveyanceType = "0">
                   </ActionContent>
                </BreakpointActionProxy>

@@ -11,7 +11,7 @@ import UIKit
 
 class DownloadShopsInteractorNSURLSession: DownloadShopsInteractorProtocol {
     
-    func execute(onSuccess: @escaping (Shops) -> Void, onError: (() -> Void)?) {
+    func execute(onSuccess: @escaping (Shops) -> Void, onError: ((String) -> Void)?) {
         
         let session = URLSession.shared
         
@@ -21,12 +21,12 @@ class DownloadShopsInteractorNSURLSession: DownloadShopsInteractorProtocol {
                 if error != nil {
                     
                     if let myError = onError {
-                        myError()
+                        myError("conexionError")
                     }
                 } else {
                     
                     if data != nil {
-                        let shops = parseShops(data!)
+                        let shops = parseShops(data!, onError)
                         OperationQueue.main.addOperation {
                             onSuccess(shops)
                         }
@@ -36,7 +36,7 @@ class DownloadShopsInteractorNSURLSession: DownloadShopsInteractorProtocol {
             task.resume()
         } else {
             if let myError = onError {
-                myError()
+                myError("urlError")
             }
         }
     }
