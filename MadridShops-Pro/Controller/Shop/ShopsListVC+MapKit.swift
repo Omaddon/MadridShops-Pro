@@ -37,7 +37,7 @@ extension ShopsListVC: CLLocationManagerDelegate, MKMapViewDelegate {
  
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
         
-        if let shopsCD = shopFetchedResultsController(context: self.context).fetchedObjects {
+        if let shopsCD = shopFetchedResultsController(context: self.shopContext).fetchedObjects {
             for shopCD in shopsCD {
                 loadAnnotation(shopCD)
             }

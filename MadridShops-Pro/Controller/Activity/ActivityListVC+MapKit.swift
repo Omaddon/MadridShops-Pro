@@ -37,7 +37,7 @@ extension ActivityListVC: CLLocationManagerDelegate, MKMapViewDelegate {
  
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
         
-        if let activitiesCD = activityFetchedResultsController(context: self.context).fetchedObjects {
+        if let activitiesCD = activityFetchedResultsController(context: self.activityContext).fetchedObjects {
             for activityCD in activitiesCD {
                 loadAnnotation(activityCD)
             }

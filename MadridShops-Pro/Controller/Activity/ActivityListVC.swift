@@ -13,7 +13,7 @@ import CoreData
 
 class ActivityListVC: UIViewController {
     
-    var context: NSManagedObjectContext!
+    var activityContext: NSManagedObjectContext!
     let locationManager = CLLocationManager()
     
     @IBOutlet weak var activitiesMap: MKMapView!

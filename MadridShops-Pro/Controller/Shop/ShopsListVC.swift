@@ -13,7 +13,7 @@ import CoreData
 
 class ShopsListVC: UIViewController {
     
-    var context: NSManagedObjectContext!
+    var shopContext: NSManagedObjectContext!
     let locationManager = CLLocationManager()
     
     @IBOutlet weak var shopsMap: MKMapView!

@@ -15,11 +15,11 @@ extension ShopsListVC: UICollectionViewDelegate, UICollectionViewDataSource {
     // MARK: - CollectionViewDataSource
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return shopFetchedResultsController(context: context).sections?.count ?? 0
+        return shopFetchedResultsController(context: self.shopContext).sections?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shopFetchedResultsController(context: context).sections![section].numberOfObjects
+        return shopFetchedResultsController(context: self.shopContext).sections![section].numberOfObjects
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -27,7 +27,7 @@ extension ShopsListVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCell",
                                                       for: indexPath) as! ShopCell
         
-        let shopCD = shopFetchedResultsController(context: context).object(at: indexPath)
+        let shopCD = shopFetchedResultsController(context: self.shopContext).object(at: indexPath)
         cell.refresh(shopCD: shopCD)
         
         return cell
@@ -38,7 +38,7 @@ extension ShopsListVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let shopCD = shopFetchedResultsController(context: context).object(at: indexPath)
+        let shopCD = shopFetchedResultsController(context: self.shopContext).object(at: indexPath)
         performSegue(withIdentifier: "SegueShopDetail", sender: shopCD)
         
     }

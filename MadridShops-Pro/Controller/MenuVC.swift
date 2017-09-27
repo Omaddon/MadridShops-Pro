@@ -12,7 +12,8 @@ import CoreData
 
 class MenuVC: UIViewController {
 
-    var context: NSManagedObjectContext!
+    var shopContext: NSManagedObjectContext!
+    var activityContext: NSManagedObjectContext!
     var userInteractor = UserSettingsInteractor()
     
     @IBOutlet weak var shopsButton: UIButton!
@@ -61,14 +62,14 @@ class MenuVC: UIViewController {
         downloadShopsInteractor.execute(onSuccess: { (shops: Shops) in
             
             let shopCacheInteractor = CacheShopsInteractorCoreData()
-            shopCacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
-                
+            shopCacheInteractor.execute(shops: shops, context: self.shopContext, onSuccess: { (shops: Shops) in
+
                 // Download and caching Shops Success. Now activities...
                 downloadActivitiesInteractor.execute(onSuccess: { (activities: Activities) in
                     
                     let activityCacheInteractor = CacheActivitiesInteractorCoreData()
-                    activityCacheInteractor.execute(activities: activities, context: self.context, onSuccess: { (activities: Activities) in
-
+                    activityCacheInteractor.execute(activities: activities, context: self.activityContext, onSuccess: { (activities: Activities) in
+                        
                         self.userInteractor.executedOnceAlready()
                         
                         self.activityView.stopAnimating()
@@ -144,12 +145,12 @@ class MenuVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueShops" {
             let vc = segue.destination as! ShopsListVC
-            vc.context = self.context
+            vc.shopContext = self.shopContext
             vc.title?.setShopTitleLanguage()
             
         } else if segue.identifier == "SegueActivities" {
             let vc = segue.destination as! ActivityListVC
-            vc.context = self.context
+            vc.activityContext = self.activityContext
             vc.title?.setActivitiesTitleLanguage()
         }
     }

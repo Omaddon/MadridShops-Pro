@@ -15,11 +15,11 @@ extension ActivityListVC: UICollectionViewDelegate, UICollectionViewDataSource {
     // MARK: - CollectionViewDataSource
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return activityFetchedResultsController(context: context).sections?.count ?? 0
+        return activityFetchedResultsController(context: self.activityContext).sections?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return activityFetchedResultsController(context: context).sections![section].numberOfObjects
+        return activityFetchedResultsController(context: self.activityContext).sections![section].numberOfObjects
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -27,7 +27,7 @@ extension ActivityListVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivityCell",
                                                       for: indexPath) as! ActivityCell
         
-        let activityCD = activityFetchedResultsController(context: context).object(at: indexPath)
+        let activityCD = activityFetchedResultsController(context: self.activityContext).object(at: indexPath)
         cell.refresh(activityCD: activityCD)
         
         return cell
@@ -38,7 +38,7 @@ extension ActivityListVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let activityCD = activityFetchedResultsController(context: context).object(at: indexPath)
+        let activityCD = activityFetchedResultsController(context: self.activityContext).object(at: indexPath)
         performSegue(withIdentifier: "SegueActivityDetail", sender: activityCD)
         
     }
