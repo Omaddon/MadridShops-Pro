@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,52 +19,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="citytour_madrid" translatesAutoresizingMaskIntoConstraints="NO" id="thy-Y1-mkb">
-                                <rect key="frame" x="41" y="21" width="293" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3a-tr-V9Y">
-                                <rect key="frame" x="62.5" y="254" width="250" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98945361375808716" green="0.99600595235824585" blue="0.99949425458908081" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Shops">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="YQH-Jp-nWt" kind="show" identifier="SegueShops" id="FaZ-W8-kx9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e82-bB-ncw">
-                                <rect key="frame" x="62.5" y="352" width="250" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98945361375808716" green="0.99600595235824585" blue="0.99949425458908081" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Activities">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="sca-KJ-hfB" kind="show" identifier="SegueActivities" id="7ID-CF-OIl"/>
-                                </connections>
-                            </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Erd-ZU-rCA">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Erd-ZU-rCA">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-bj-JuZ">
-                                <rect key="frame" x="61.64301790760328" y="558" width="250" height="62.999999999999929"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-bj-JuZ">
+                                <rect key="frame" x="62.5" y="584" width="250" height="63"/>
                                 <color key="backgroundColor" red="0.98945361379999996" green="0.99600595240000001" blue="0.99949425459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="Vp6-DM-DTs"/>
+                                    <constraint firstAttribute="width" constant="250" id="dcq-3u-O9W"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Reload">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -77,9 +42,68 @@
                                     <action selector="reloadData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="izV-xc-3E1"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madridShops-Pro" translatesAutoresizingMaskIntoConstraints="NO" id="thy-Y1-mkb">
+                                <rect key="frame" x="81" y="84" width="213" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="thy-Y1-mkb" secondAttribute="height" multiplier="213:89" id="yzX-lr-prs"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e82-bB-ncw">
+                                <rect key="frame" x="62.5" y="351" width="250" height="63"/>
+                                <color key="backgroundColor" red="0.98945361375808716" green="0.99600595235824585" blue="0.99949425458908081" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="DYY-g0-lLG"/>
+                                    <constraint firstAttribute="width" constant="250" id="Jh5-ZO-frL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Activities">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="sca-KJ-hfB" kind="show" identifier="SegueActivities" id="7ID-CF-OIl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3a-tr-V9Y">
+                                <rect key="frame" x="62.5" y="253" width="250" height="63"/>
+                                <color key="backgroundColor" red="0.98945361375808716" green="0.99600595235824585" blue="0.99949425458908081" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="Sae-9K-2ID"/>
+                                    <constraint firstAttribute="width" constant="250" id="iTs-bm-nKQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Shops">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="YQH-Jp-nWt" kind="show" identifier="SegueShops" id="FaZ-W8-kx9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88517380259395417" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e82-bB-ncw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4DF-20-ThF"/>
+                            <constraint firstItem="Erd-ZU-rCA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4GA-pX-Hzx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="e82-bB-ncw" secondAttribute="bottom" constant="20" id="A9O-Qx-c4F"/>
+                            <constraint firstItem="Erd-ZU-rCA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G7t-dc-OTU"/>
+                            <constraint firstItem="e82-bB-ncw" firstAttribute="top" secondItem="K3a-tr-V9Y" secondAttribute="bottom" constant="35" id="ULJ-56-W07"/>
+                            <constraint firstItem="thy-Y1-mkb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Xw8-Sk-3bp"/>
+                            <constraint firstItem="thy-Y1-mkb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZU1-Sk-rjL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ek6-bj-JuZ" secondAttribute="bottom" constant="20" id="cap-RK-cUU"/>
+                            <constraint firstItem="K3a-tr-V9Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehZ-FP-Lnh"/>
+                            <constraint firstItem="ek6-bj-JuZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mha-CU-XzI"/>
+                            <constraint firstItem="K3a-tr-V9Y" firstAttribute="top" secondItem="thy-Y1-mkb" secondAttribute="bottom" constant="80" id="u4d-Ep-Lft"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Madrid Shops - PRO" id="nqc-5L-OsV">
@@ -518,6 +542,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="citytour_madrid" width="293" height="216"/>
+        <image name="madridShops-Pro" width="213" height="89"/>
     </resources>
 </document>

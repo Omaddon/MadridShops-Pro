@@ -18,5 +18,12 @@ func deviceLanguage() -> DeviceLanguageTypes {
     
     let language = Locale.current.languageCode
     
-    return language == "es" ? DeviceLanguageTypes.Es : DeviceLanguageTypes.En
+    switch language {
+    case "en"?:
+        return DeviceLanguageTypes.En
+    case "es"?:
+        return DeviceLanguageTypes.Es
+    default:
+        return DeviceLanguageTypes.Es
+    }
 }
