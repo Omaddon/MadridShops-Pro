@@ -166,7 +166,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iUu-vJ-x0S"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Shops" id="rgI-Qb-E7V"/>
+                    <navigationItem key="navigationItem" title="Shops" largeTitleDisplayMode="always" id="rgI-Qb-E7V"/>
                     <connections>
                         <outlet property="shopsCollectionView" destination="yLN-Tg-cIm" id="qbP-h0-dvI"/>
                         <outlet property="shopsMap" destination="YzW-r0-dnW" id="X4l-RZ-bKz"/>
@@ -367,7 +367,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gEZ-qe-ox7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Activities" id="6YR-VX-E8n"/>
+                    <navigationItem key="navigationItem" title="Activities" largeTitleDisplayMode="always" id="6YR-VX-E8n"/>
                     <connections>
                         <outlet property="activitiesCollectionView" destination="uKH-YN-144" id="xfm-WT-2g6"/>
                         <outlet property="activitiesMap" destination="wue-qL-cvC" id="hRF-QN-fwv"/>
