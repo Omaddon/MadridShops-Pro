@@ -19,12 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madridShops-Pro" translatesAutoresizingMaskIntoConstraints="NO" id="Y0r-iH-eSE">
-                                <rect key="frame" x="81" y="84" width="213" height="89"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Y0r-iH-eSE" secondAttribute="height" multiplier="213:89" id="zsN-YD-gIQ"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Madrid Shops - PRO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pa-5Q-06X">
                                 <rect key="frame" x="74.5" y="319" width="226" height="29"/>
                                 <constraints>
@@ -35,13 +29,21 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madridShops-Pro" translatesAutoresizingMaskIntoConstraints="NO" id="r30-p4-xR0">
+                                <rect key="frame" x="81" y="84" width="213" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="r30-p4-xR0" secondAttribute="height" multiplier="213:89" id="Uz2-2A-oOr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Y0r-iH-eSE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="K9R-Is-Vnb"/>
                             <constraint firstItem="9Pa-5Q-06X" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Kdd-ab-MG1"/>
+                            <constraint firstItem="r30-p4-xR0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="LlS-jS-Gdj"/>
+                            <constraint firstItem="r30-p4-xR0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RFz-fn-jYS"/>
                             <constraint firstItem="9Pa-5Q-06X" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="aeM-pk-d0e"/>
-                            <constraint firstItem="Y0r-iH-eSE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="h6Q-En-zpx"/>
+                            <constraint firstItem="r30-p4-xR0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="aqt-zL-gfo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r30-p4-xR0" secondAttribute="trailing" constant="81" id="fqK-DX-7Fm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

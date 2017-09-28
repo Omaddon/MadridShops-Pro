@@ -82,7 +82,7 @@ class MenuVC: UIViewController {
                         self.activitiesButton.isEnabled = true
                         
                     }, onError: {
-                        
+
                         // Activity cache error
                         self.showModalCacheError {
                             self.prepareReloadView()
