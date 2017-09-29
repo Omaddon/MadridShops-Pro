@@ -54,6 +54,8 @@
 		8CB49EB91F73CEE200A64112 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB49EB81F73CEE200A64112 /* MapKit.framework */; };
 		8CC0A53A1F787CC9009F799F /* DeviceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC0A5391F787CC9009F799F /* DeviceLanguage.swift */; };
 		8CD0C7AC1F7908F700693B78 /* String+Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0C7AB1F7908F700693B78 /* String+Language.swift */; };
+		8CEF7F3D1F7EBC6600F64EAD /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF7F3C1F7EBC6600F64EAD /* LanguageVC.swift */; };
+		8CEF7F3F1F7ECF6300F64EAD /* LanguageOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF7F3E1F7ECF6300F64EAD /* LanguageOptionsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 		8CB49EB81F73CEE200A64112 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8CC0A5391F787CC9009F799F /* DeviceLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceLanguage.swift; sourceTree = "<group>"; };
 		8CD0C7AB1F7908F700693B78 /* String+Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Language.swift"; sourceTree = "<group>"; };
+		8CEF7F3C1F7EBC6600F64EAD /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
+		8CEF7F3E1F7ECF6300F64EAD /* LanguageOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageOptionsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				8C8175C71F74918700BF9DF8 /* MenuVC.swift */,
+				8CEF7F3C1F7EBC6600F64EAD /* LanguageVC.swift */,
+				8CEF7F3E1F7ECF6300F64EAD /* LanguageOptionsVC.swift */,
 				8C75CC371F7AAEF2002FC21D /* Shop */,
 				8C75CC381F7AAF06002FC21D /* Activity */,
 			);
@@ -437,6 +443,7 @@
 				8C757E4F1F747FE5003B6E48 /* CoreDataStack.swift in Sources */,
 				8C757E551F748117003B6E48 /* CacheShopsInteractorCoreData.swift in Sources */,
 				8C757E4B1F744E7D003B6E48 /* ShopCell.swift in Sources */,
+				8CEF7F3D1F7EBC6600F64EAD /* LanguageVC.swift in Sources */,
 				8C3413FB1F743F0D00DE12F5 /* URLs.swift in Sources */,
 				8C3413F71F743CF700DE12F5 /* DownloadShopsInteractorProtocol.swift in Sources */,
 				8C3413E81F7430AC00DE12F5 /* Shops.swift in Sources */,
@@ -453,6 +460,7 @@
 				8C6173981F7ACD1E00071F81 /* MapActivities.swift in Sources */,
 				8C3413EC1F74351600DE12F5 /* ShopDetailVC.swift in Sources */,
 				8C3413E61F742FD600DE12F5 /* Activity.swift in Sources */,
+				8CEF7F3F1F7ECF6300F64EAD /* LanguageOptionsVC.swift in Sources */,
 				8C2BABD41F7ABD8F00838A08 /* DownloadActivitiesInteractorNSURLSession.swift in Sources */,
 				8C8175CA1F74965100BF9DF8 /* ShopFetchedResultsController.swift in Sources */,
 				8C8175C81F74918700BF9DF8 /* MenuVC.swift in Sources */,

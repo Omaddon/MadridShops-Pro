@@ -64,6 +64,22 @@ extension String {
         }
     }
     
+    mutating func setOptionsTitleLanguage() {
+        if deviceLanguage() == DeviceLanguageTypes.Es {
+            self = "Opciones"
+        } else {
+            self = "Options"
+        }
+    }
+    
+    mutating func setTitleLaguangeCell() {
+        if deviceLanguage() == DeviceLanguageTypes.Es {
+            self = "Idioma"
+        } else {
+            self = "Language"
+        }
+    }
+    
 }
 
 

@@ -14,16 +14,44 @@ public enum DeviceLanguageTypes {
 }
 
 
+
 func deviceLanguage() -> DeviceLanguageTypes {
+    let defaults = UserDefaults.standard
     
-    let language = Locale.current.languageCode
-    
-    switch language {
-    case "en"?:
-        return DeviceLanguageTypes.En
-    case "es"?:
-        return DeviceLanguageTypes.Es
-    default:
-        return DeviceLanguageTypes.Es
+    if let language = (defaults.array(forKey: "language")?.last as! DeviceLanguageTypes?) {
+        return language
+    } else {
+        let lan = Locale.current.languageCode
+        
+        switch lan {
+        case "en"?:
+            return DeviceLanguageTypes.En
+        case "es"?:
+            return DeviceLanguageTypes.Es
+        default:
+            return DeviceLanguageTypes.Es
+        }
     }
 }
+
+
+func languagesOptions(_ language: DeviceLanguageTypes?) -> [String] {
+    switch language {
+    case .En?:
+        return ["Spanish", "English"]
+    case .Es?:
+        return ["Español", "Inglés"]
+    default:
+        return ["Español", "Inglés"]
+    }
+}
+
+
+
+
+
+
+
+
+
+

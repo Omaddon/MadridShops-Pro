@@ -33,4 +33,32 @@ class UserSettingsInteractor: UserSettingsInteractorProtocol {
     }
     
     
+    func setUserLanguage(language: DeviceLanguageTypes?) {
+        let defaults = UserDefaults.standard
+        
+        if let lan = language {
+            defaults.set(lan, forKey: "language")
+        } else {
+            defaults.set(DeviceLanguageTypes.Es, forKey: "language")
+        }
+        
+        defaults.synchronize()
+    }
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
