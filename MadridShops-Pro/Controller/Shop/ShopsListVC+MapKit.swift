@@ -15,7 +15,7 @@ import CoreData
 extension ShopsListVC: CLLocationManagerDelegate, MKMapViewDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // self.shopsMap.setCenter(locations.last.coordinate, animated: true)
+        self.shopsMap.setCenter((locations.last?.coordinate)!, animated: true)
     }
     
     

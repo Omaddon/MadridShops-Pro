@@ -108,6 +108,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Madrid Shops - PRO" id="nqc-5L-OsV">
                         <barButtonItem key="backBarButtonItem" title="Menu" id="ryC-xI-ax7"/>
+                        <barButtonItem key="rightBarButtonItem" image="settingsIcon" id="58U-8B-rGG"/>
                     </navigationItem>
                     <connections>
                         <outlet property="activitiesButton" destination="e82-bB-ncw" id="kgC-yv-jX9"/>
@@ -128,11 +129,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzW-r0-dnW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="301.5"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzW-r0-dnW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="279.5"/>
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yLN-Tg-cIm">
-                                <rect key="frame" x="0.0" y="365.5" width="375" height="301.5"/>
+                                <rect key="frame" x="0.0" y="343.5" width="375" height="279.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Crf-kE-H44">
                                     <size key="itemSize" width="375" height="65"/>
@@ -190,10 +191,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iUu-vJ-x0S"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Shops" largeTitleDisplayMode="always" id="rgI-Qb-E7V"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Shops" largeTitleDisplayMode="always" id="rgI-Qb-E7V">
+                        <barButtonItem key="rightBarButtonItem" image="userLocImage" id="MGX-d5-Ceg">
+                            <connections>
+                                <action selector="showUserLoc:" destination="YQH-Jp-nWt" id="4ZY-Ms-bLs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="shopsCollectionView" destination="yLN-Tg-cIm" id="qbP-h0-dvI"/>
                         <outlet property="shopsMap" destination="YzW-r0-dnW" id="X4l-RZ-bKz"/>
+                        <outlet property="showUserLocButton" destination="MGX-d5-Ceg" id="dY5-ov-GCH"/>
                         <segue destination="1zo-7h-Fnc" kind="show" identifier="SegueShopDetail" id="PxJ-W4-HGq"/>
                     </connections>
                 </viewController>
@@ -382,7 +392,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wue-qL-cvC">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wue-qL-cvC">
                                 <rect key="frame" x="0.0" y="64" width="375" height="301.5"/>
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uKH-YN-144">
@@ -649,5 +659,7 @@
     </scenes>
     <resources>
         <image name="madridShops-Pro" width="213" height="89"/>
+        <image name="settingsIcon" width="22" height="22"/>
+        <image name="userLocImage" width="22" height="22"/>
     </resources>
 </document>

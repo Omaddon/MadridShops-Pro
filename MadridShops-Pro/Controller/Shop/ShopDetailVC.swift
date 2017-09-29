@@ -50,7 +50,7 @@ class ShopDetailVC: UIViewController {
         shopTelephone.text = shopCD.telephone
         shopAddress.text = shopCD.address
         shopHours.text?.openingLanguage(shopCD)
-        shopDescription.text.descriptionLanguage(shopCD)        
+        shopDescription.text.descriptionLanguage(shopCD)
     }
 
 }

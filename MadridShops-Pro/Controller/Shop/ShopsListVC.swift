@@ -16,19 +16,18 @@ class ShopsListVC: UIViewController {
     var shopContext: NSManagedObjectContext!
     let locationManager = CLLocationManager()
     
+    var showUser: Bool = false
+    
     @IBOutlet weak var shopsMap: MKMapView!
     @IBOutlet weak var shopsCollectionView: UICollectionView!
-
+    @IBOutlet weak var showUserLocButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()        
-        
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
+        super.viewDidLoad()
+
         self.locationManager.delegate = self
         self.shopsMap.delegate = self
-        
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.shopsMap.showsUserLocation = true
         
         let madridLocationInitial = CLLocation(latitude: 40.427319, longitude: -3.6932110000000193)
         let madridRegion = MKCoordinateRegion(center: madridLocationInitial.coordinate, span: 
@@ -53,7 +52,29 @@ class ShopsListVC: UIViewController {
         self.locationManager.stopUpdatingHeading()
     }
     
+    
+    @IBAction func showUserLoc(_ sender: UIButton) {
+        self.showUser = !self.showUser
+        
+        if self.showUser {
+            self.locationManager.requestWhenInUseAuthorization()
+            self.locationManager.startUpdatingLocation()
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.shopsMap.showsUserLocation = true
+            sender.isSelected = true
+        } else {
+            self.locationManager.stopUpdatingLocation()
+            self.shopsMap.showsUserLocation = false
+            sender.isSelected = false
+        }
+    }
 }
+
+
+
+
+
+
 
 
 
