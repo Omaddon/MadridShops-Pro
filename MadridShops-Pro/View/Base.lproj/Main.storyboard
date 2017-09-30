@@ -540,10 +540,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gEZ-qe-ox7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Activities" largeTitleDisplayMode="always" id="6YR-VX-E8n"/>
+                    <navigationItem key="navigationItem" title="Activities" largeTitleDisplayMode="always" id="6YR-VX-E8n">
+                        <barButtonItem key="rightBarButtonItem" image="userLocImage" id="X29-vz-6Yi">
+                            <connections>
+                                <action selector="showUserLoc:" destination="sca-KJ-hfB" id="01Z-7T-QD6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activitiesCollectionView" destination="uKH-YN-144" id="xfm-WT-2g6"/>
                         <outlet property="activitiesMap" destination="wue-qL-cvC" id="hRF-QN-fwv"/>
+                        <outlet property="showUserLocButton" destination="X29-vz-6Yi" id="L7f-h3-vOU"/>
                         <segue destination="eGm-Lp-ph0" kind="show" identifier="SegueActivityDetail" id="5OR-nI-YVs"/>
                     </connections>
                 </viewController>

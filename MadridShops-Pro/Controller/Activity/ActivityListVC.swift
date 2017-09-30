@@ -16,20 +16,18 @@ class ActivityListVC: UIViewController {
     var activityContext: NSManagedObjectContext!
     let locationManager = CLLocationManager()
     
+    var showUser: Bool = false
+    
     @IBOutlet weak var activitiesMap: MKMapView!
     @IBOutlet weak var activitiesCollectionView: UICollectionView!
+    @IBOutlet weak var showUserLocButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
         self.locationManager.delegate = self
         self.activitiesMap.delegate = self
-        
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.activitiesMap.showsUserLocation = true
         
         let madridLocationInitial = CLLocation(latitude: 40.427319, longitude: -3.6932110000000193)
         let madridRegion = MKCoordinateRegion(center: madridLocationInitial.coordinate, span:
@@ -52,6 +50,24 @@ class ActivityListVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.locationManager.stopUpdatingHeading()
+        self.locationManager.stopUpdatingLocation()
+    }
+    
+    
+    @IBAction func showUserLoc(_ sender: UIButton) {
+        self.showUser = !self.showUser
+        
+        if self.showUser {
+            self.locationManager.requestWhenInUseAuthorization()
+            self.locationManager.startUpdatingLocation()
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.activitiesMap.showsUserLocation = true
+            sender.isSelected = true
+        } else {
+            self.locationManager.stopUpdatingLocation()
+            self.activitiesMap.showsUserLocation = false
+            sender.isSelected = false
+        }
     }
     
 }

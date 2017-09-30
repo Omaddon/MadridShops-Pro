@@ -50,6 +50,7 @@ class ShopsListVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.locationManager.stopUpdatingHeading()
+        self.locationManager.stopUpdatingLocation()
     }
     
     
