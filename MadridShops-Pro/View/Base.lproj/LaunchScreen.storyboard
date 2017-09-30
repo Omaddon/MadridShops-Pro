@@ -29,7 +29,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madridShops-Pro" translatesAutoresizingMaskIntoConstraints="NO" id="r30-p4-xR0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="madridShops-Pro" translatesAutoresizingMaskIntoConstraints="NO" id="r30-p4-xR0">
                                 <rect key="frame" x="81" y="84" width="213" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="r30-p4-xR0" secondAttribute="height" multiplier="213:89" id="Uz2-2A-oOr"/>

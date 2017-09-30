@@ -15,6 +15,7 @@ class LanguageOptionsVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        languageTableView.tableFooterView = UIView()
         setTitleForLanguageMenu()
     }
     

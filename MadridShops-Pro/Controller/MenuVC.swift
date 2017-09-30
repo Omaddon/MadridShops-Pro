@@ -31,14 +31,13 @@ class MenuVC: UIViewController {
         reloadButton.isEnabled = false
         
         languageNamesOfButtons()
-        
-        self.userInteractor.executeOnce {
-            initializeData()
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         languageNamesOfButtons()
+        self.userInteractor.executeOnce {
+            initializeData()
+        }
     }
 
     
@@ -160,7 +159,33 @@ class MenuVC: UIViewController {
             let vc = segue.destination as! ActivityListVC
             vc.activityContext = self.activityContext
             vc.title?.setActivitiesTitleLanguage()
+            
+        } else if segue.identifier == "SegueMenuOptions" {
+            let vc = segue.destination as! OptionsVC
+            vc.shopContext = self.shopContext
+            vc.activityContext = self.activityContext
         }
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

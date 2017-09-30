@@ -28,6 +28,7 @@
 		8C39559B1F7D58D500D5310E /* TestShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39559A1F7D58D500D5310E /* TestShop.swift */; };
 		8C39559D1F7D634800D5310E /* TestShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39559C1F7D634800D5310E /* TestShops.swift */; };
 		8C41B4241F7AB0E900BDC1FF /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C41B4231F7AB0E900BDC1FF /* ActivityCell.swift */; };
+		8C466DB21F7FB3180060A660 /* DataOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C466DB11F7FB3180060A660 /* DataOptions.swift */; };
 		8C574EA81F7D6BEA00902033 /* TestActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C574EA71F7D6BEA00902033 /* TestActivity.swift */; };
 		8C574EAA1F7D6D1800902033 /* TestActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C574EA91F7D6D1800902033 /* TestActivities.swift */; };
 		8C574EAC1F7D710500902033 /* TestURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C574EAB1F7D710500902033 /* TestURL.swift */; };
@@ -54,7 +55,7 @@
 		8CB49EB91F73CEE200A64112 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB49EB81F73CEE200A64112 /* MapKit.framework */; };
 		8CC0A53A1F787CC9009F799F /* DeviceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC0A5391F787CC9009F799F /* DeviceLanguage.swift */; };
 		8CD0C7AC1F7908F700693B78 /* String+Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0C7AB1F7908F700693B78 /* String+Language.swift */; };
-		8CEF7F3D1F7EBC6600F64EAD /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF7F3C1F7EBC6600F64EAD /* LanguageVC.swift */; };
+		8CEF7F3D1F7EBC6600F64EAD /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF7F3C1F7EBC6600F64EAD /* OptionsVC.swift */; };
 		8CEF7F3F1F7ECF6300F64EAD /* LanguageOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF7F3E1F7ECF6300F64EAD /* LanguageOptionsVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		8C39559A1F7D58D500D5310E /* TestShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestShop.swift; sourceTree = "<group>"; };
 		8C39559C1F7D634800D5310E /* TestShops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestShops.swift; sourceTree = "<group>"; };
 		8C41B4231F7AB0E900BDC1FF /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		8C466DB11F7FB3180060A660 /* DataOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOptions.swift; sourceTree = "<group>"; };
 		8C574EA71F7D6BEA00902033 /* TestActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestActivity.swift; sourceTree = "<group>"; };
 		8C574EA91F7D6D1800902033 /* TestActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestActivities.swift; sourceTree = "<group>"; };
 		8C574EAB1F7D710500902033 /* TestURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestURL.swift; sourceTree = "<group>"; };
@@ -120,7 +122,7 @@
 		8CB49EB81F73CEE200A64112 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8CC0A5391F787CC9009F799F /* DeviceLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceLanguage.swift; sourceTree = "<group>"; };
 		8CD0C7AB1F7908F700693B78 /* String+Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Language.swift"; sourceTree = "<group>"; };
-		8CEF7F3C1F7EBC6600F64EAD /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
+		8CEF7F3C1F7EBC6600F64EAD /* OptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		8CEF7F3E1F7ECF6300F64EAD /* LanguageOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageOptionsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C466DB01F7FB2F60060A660 /* MenuOptions */ = {
+			isa = PBXGroup;
+			children = (
+				8CEF7F3C1F7EBC6600F64EAD /* OptionsVC.swift */,
+				8CEF7F3E1F7ECF6300F64EAD /* LanguageOptionsVC.swift */,
+				8C466DB11F7FB3180060A660 /* DataOptions.swift */,
+			);
+			path = MenuOptions;
+			sourceTree = "<group>";
+		};
 		8C75CC371F7AAEF2002FC21D /* Shop */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,8 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				8C8175C71F74918700BF9DF8 /* MenuVC.swift */,
-				8CEF7F3C1F7EBC6600F64EAD /* LanguageVC.swift */,
-				8CEF7F3E1F7ECF6300F64EAD /* LanguageOptionsVC.swift */,
+				8C466DB01F7FB2F60060A660 /* MenuOptions */,
 				8C75CC371F7AAEF2002FC21D /* Shop */,
 				8C75CC381F7AAF06002FC21D /* Activity */,
 			);
@@ -443,12 +454,13 @@
 				8C757E4F1F747FE5003B6E48 /* CoreDataStack.swift in Sources */,
 				8C757E551F748117003B6E48 /* CacheShopsInteractorCoreData.swift in Sources */,
 				8C757E4B1F744E7D003B6E48 /* ShopCell.swift in Sources */,
-				8CEF7F3D1F7EBC6600F64EAD /* LanguageVC.swift in Sources */,
+				8CEF7F3D1F7EBC6600F64EAD /* OptionsVC.swift in Sources */,
 				8C3413FB1F743F0D00DE12F5 /* URLs.swift in Sources */,
 				8C3413F71F743CF700DE12F5 /* DownloadShopsInteractorProtocol.swift in Sources */,
 				8C3413E81F7430AC00DE12F5 /* Shops.swift in Sources */,
 				8C2BABD21F7ABD5C00838A08 /* DownloadActivitiesInteractorProtocol.swift in Sources */,
 				8C3413F51F74397E00DE12F5 /* MadridShopsPro.xcdatamodeld in Sources */,
+				8C466DB21F7FB3180060A660 /* DataOptions.swift in Sources */,
 				8C08DB361F77B796000697DF /* ShopsListVC+MapKit.swift in Sources */,
 				8C3413EA1F7431E400DE12F5 /* Activities.swift in Sources */,
 				8C757E4D1F745115003B6E48 /* String+Image.swift in Sources */,

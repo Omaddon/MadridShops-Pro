@@ -80,6 +80,54 @@ extension String {
         }
     }
     
+    mutating func setDataTitleCell() {
+        if deviceLanguage() == DeviceLanguageTypes.es {
+            self = "Datos"
+        } else {
+            self = "Data"
+        }
+    }
+    
+    mutating func setLastUpdateLabel() {
+        if deviceLanguage() == DeviceLanguageTypes.es {
+            self = "Última actualización:"
+        } else {
+            self = "Last Update:"
+        }
+    }
+    
+    mutating func setNumberOfShopsLabel() {
+        if deviceLanguage() == DeviceLanguageTypes.es {
+            self = "#Tiendas:"
+        } else {
+            self = "#Shops:"
+        }
+    }
+    
+    mutating func setNumberOfActivities() {
+        if deviceLanguage() == DeviceLanguageTypes.es {
+            self = "#Actividades:"
+        } else {
+            self = "#Activities:"
+        }
+    }
+    
+    mutating func setDownloadDataAgainLabel() {
+        if deviceLanguage() == DeviceLanguageTypes.es {
+            self = "Descargar datos de nuevo?"
+        } else {
+            self = "Download data again?"
+        }
+    }
+    
+    mutating func setAdviceDownloadData() {
+        if deviceLanguage() == DeviceLanguageTypes.es {
+            self = "Puede llevar varios minutos."
+        } else {
+            self = "It may take several minutes."
+        }
+    }
+    
 }
 
 
@@ -108,6 +156,14 @@ extension UIButton {
             self.setTitle("Recargar", for: UIControlState.normal)
         } else {
             self.setTitle("Reload", for: UIControlState.normal)
+        }
+    }
+    
+    func setDownloadDataButtonTitle() {
+        if deviceLanguage() == DeviceLanguageTypes.es {
+            self.setTitle("Descargar Datos", for: UIControlState.normal)
+        } else {
+            self.setTitle("Download Data", for: UIControlState.normal)
         }
     }
 }
@@ -187,6 +243,9 @@ func showErrorModal(title: String,
     })
     
 }
+
+
+
 
 
 

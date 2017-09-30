@@ -29,7 +29,15 @@ class UserSettingsInteractor: UserSettingsInteractorProtocol {
     func executedOnceAlready() {
         let defaults = UserDefaults.standard
         
+        let dateSaved = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "es_ES")
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let dateString = formatter.string(from: dateSaved)
+        
+        defaults.set(dateString, forKey: "lastUpdate")
         defaults.set(true, forKey: "saved")
+        
         defaults.synchronize()
     }
     
