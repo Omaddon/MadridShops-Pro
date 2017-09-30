@@ -12,6 +12,7 @@ import Foundation
 protocol UserSettingsInteractorProtocol {
     func executeOnce(closure: () -> Void)
     func executedOnceAlready()
+    func setUserLanguage(language: DeviceLanguageTypes?)
 }
 
 
@@ -35,11 +36,13 @@ class UserSettingsInteractor: UserSettingsInteractorProtocol {
     
     func setUserLanguage(language: DeviceLanguageTypes?) {
         let defaults = UserDefaults.standard
+        var lan = "es"
         
-        if let lan = language {
+        if language != nil {
+            lan = giveMeStringFromLanguageType(language!)
             defaults.set(lan, forKey: "language")
         } else {
-            defaults.set(DeviceLanguageTypes.Es, forKey: "language")
+            defaults.set(lan, forKey: "language")
         }
         
         defaults.synchronize()

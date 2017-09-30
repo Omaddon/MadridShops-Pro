@@ -9,22 +9,40 @@
 import UIKit
 
 class LanguageVC: UITableViewController {
-
+    
+    @IBOutlet var optionsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setTitleForLanguageMenu()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setTitleForLanguageMenu()
+        self.optionsTableView.reloadData()
+    }
+  
+    
+    func setTitleForLanguageMenu() {
         var title = ""
         title.setOptionsTitleLanguage()
         self.title = title
     }
     
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -39,6 +57,7 @@ class LanguageVC: UITableViewController {
         
         return cell
     }
+  
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {

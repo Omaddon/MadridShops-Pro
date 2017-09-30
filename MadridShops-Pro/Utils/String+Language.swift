@@ -12,7 +12,7 @@ import UIKit
 extension String {
     
     mutating func openingLanguage(_ shopCD: ShopCD) {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self = shopCD.openingHours_es ?? ""
         } else {
             self = shopCD.openingHours_en ?? ""
@@ -21,7 +21,7 @@ extension String {
     
     
     mutating func openingLanguage(_ activityCD: ActivityCD) {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self = activityCD.openingHours_es ?? ""
         } else {
             self = activityCD.openingHours_en ?? ""
@@ -30,7 +30,7 @@ extension String {
 
     
     mutating func descriptionLanguage(_ shopCD: ShopCD) {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self = shopCD.description_es ?? ""
         } else {
             self = shopCD.description_en ?? ""
@@ -39,7 +39,7 @@ extension String {
     
     
     mutating func descriptionLanguage(_ activityCD: ActivityCD) {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self = activityCD.description_es ?? ""
         } else {
             self = activityCD.description_en ?? ""
@@ -48,7 +48,7 @@ extension String {
     
     
     mutating func setShopTitleLanguage() {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self = "Tiendas"
         } else {
             self = "Shops"
@@ -57,7 +57,7 @@ extension String {
     
     
     mutating func setActivitiesTitleLanguage() {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self = "Actividades"
         } else {
             self = "Activities"
@@ -65,7 +65,7 @@ extension String {
     }
     
     mutating func setOptionsTitleLanguage() {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self = "Opciones"
         } else {
             self = "Options"
@@ -73,7 +73,7 @@ extension String {
     }
     
     mutating func setTitleLaguangeCell() {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self = "Idioma"
         } else {
             self = "Language"
@@ -86,7 +86,7 @@ extension String {
 extension UIButton {
     
     func setTitleButtonShops() {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self.setTitle("Tiendas", for: UIControlState.normal)
         } else {
             self.setTitle("Shops", for: UIControlState.normal)
@@ -95,7 +95,7 @@ extension UIButton {
     
     
     func setTitleButtonActivities() {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self.setTitle("Actividades", for: UIControlState.normal)
         } else {
             self.setTitle("Activities", for: UIControlState.normal)
@@ -104,7 +104,7 @@ extension UIButton {
     
     
     func setTitleButtonReload() {
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             self.setTitle("Recargar", for: UIControlState.normal)
         } else {
             self.setTitle("Reload", for: UIControlState.normal)
@@ -119,7 +119,7 @@ extension UIViewController {
         var title: String = ""
         var message: String = ""
         
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             title = "Error de conexión"
             message = "Imposible conectarse a internet."
             
@@ -136,7 +136,7 @@ extension UIViewController {
         var title: String = ""
         var message: String = ""
         
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             title = "Error guardando los datos"
             message = "Un error ha ocurrido durante el guardado de los datos del servidor."
             
@@ -154,7 +154,7 @@ extension UIViewController {
         var title: String = ""
         var message: String = ""
         
-        if deviceLanguage() == DeviceLanguageTypes.Es {
+        if deviceLanguage() == DeviceLanguageTypes.es {
             title = "Error en los datos"
             message = "Los datos descargados están corruptos."
             

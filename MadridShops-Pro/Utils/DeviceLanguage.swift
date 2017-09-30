@@ -10,42 +10,66 @@ import Foundation
 
 
 public enum DeviceLanguageTypes {
-    case En, Es
+    case en, es
 }
 
 
 
 func deviceLanguage() -> DeviceLanguageTypes {
     let defaults = UserDefaults.standard
+    let language = defaults.string(forKey: "language")
     
-    if let language = (defaults.array(forKey: "language")?.last as! DeviceLanguageTypes?) {
-        return language
-    } else {
-        let lan = Locale.current.languageCode
-        
-        switch lan {
-        case "en"?:
-            return DeviceLanguageTypes.En
-        case "es"?:
-            return DeviceLanguageTypes.Es
-        default:
-            return DeviceLanguageTypes.Es
-        }
+    switch language {
+    case "es"?:
+        return DeviceLanguageTypes.es
+    case "en"?:
+        return DeviceLanguageTypes.en
+    default:
+        return giveMeLanguageTypeFrom(Locale.current.languageCode)
     }
 }
 
 
-func languagesOptions(_ language: DeviceLanguageTypes?) -> [String] {
+func languagesList(_ language: DeviceLanguageTypes?) -> [String] {
     switch language {
-    case .En?:
+    case .en?:
         return ["Spanish", "English"]
-    case .Es?:
+    case .es?:
         return ["Español", "Inglés"]
     default:
         return ["Español", "Inglés"]
     }
 }
 
+
+func languageTypesOption(_ language: String) -> DeviceLanguageTypes {
+    switch language {
+    case "Spanish", "Español":
+        return DeviceLanguageTypes.es
+    case "English", "Inglés":
+        return DeviceLanguageTypes.en
+    default:
+        return DeviceLanguageTypes.es
+    }
+    
+}
+
+
+func giveMeLanguageTypeFrom(_ lan: String?) -> DeviceLanguageTypes {
+    switch lan {
+    case "en"?:
+        return DeviceLanguageTypes.en
+    case "es"?:
+        return DeviceLanguageTypes.es
+    default:
+        return DeviceLanguageTypes.es
+    }
+}
+
+
+func giveMeStringFromLanguageType(_ type: DeviceLanguageTypes) -> String {
+    return String(describing: type)
+}
 
 
 

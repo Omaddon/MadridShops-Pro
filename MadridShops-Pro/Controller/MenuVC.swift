@@ -20,6 +20,7 @@ class MenuVC: UIViewController {
     @IBOutlet weak var activitiesButton: UIButton!
     @IBOutlet weak var reloadButton: UIButton!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
+    @IBOutlet weak var menuButtonItem: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -34,6 +35,10 @@ class MenuVC: UIViewController {
         self.userInteractor.executeOnce {
             initializeData()
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        languageNamesOfButtons()
     }
 
     
@@ -54,6 +59,7 @@ class MenuVC: UIViewController {
         activitiesButton.isHidden = true
         reloadButton.isHidden = true
         reloadButton.isEnabled = false
+        menuButtonItem.isEnabled = false
        
         let downloadShopsInteractor: DownloadShopsInteractorProtocol = DownloadShopsInteractorNSURLSession()
         
@@ -80,6 +86,8 @@ class MenuVC: UIViewController {
                         
                         self.activitiesButton.isHidden = false
                         self.activitiesButton.isEnabled = true
+                        
+                        self.menuButtonItem.isEnabled = true
                         
                     }, onError: {
 

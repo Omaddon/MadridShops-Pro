@@ -117,6 +117,7 @@
                     <connections>
                         <outlet property="activitiesButton" destination="e82-bB-ncw" id="kgC-yv-jX9"/>
                         <outlet property="activityView" destination="Erd-ZU-rCA" id="UVE-Sk-xUh"/>
+                        <outlet property="menuButtonItem" destination="58U-8B-rGG" id="iOl-Vj-4Fr"/>
                         <outlet property="reloadButton" destination="ek6-bj-JuZ" id="zX3-Xm-ulp"/>
                         <outlet property="shopsButton" destination="K3a-tr-V9Y" id="1gG-We-ome"/>
                     </connections>
@@ -158,6 +159,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="optionsTableView" destination="IM5-EA-o0B" id="ea5-m9-Nnp"/>
                         <segue destination="ojI-ng-GR6" kind="show" identifier="languageOptionsSegue" id="Z8T-ua-nze"/>
                     </connections>
                 </tableViewController>
@@ -197,6 +199,9 @@
                             <outlet property="delegate" destination="ojI-ng-GR6" id="g0p-Pp-DvR"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="languageTableView" destination="Ses-mX-dGe" id="0iH-lL-PB9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFj-bw-gS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
