@@ -16,9 +16,9 @@ Create a mobile application to display information of Shops in Madrid, even when
 URL MapCache API
 >"https://maps.googleapis.com/maps/api/staticmap?%25&size=320x220&scale=2&markers="
 
-[URL Shops API] (https://madrid-shops.com/json_new/getShops.php)
+[URL Shops API](https://madrid-shops.com/json_new/getShops.php)
 
-[URL Activities API] (https://madrid-shops.com/json_new/getActivities.php)
+[URL Activities API](https://madrid-shops.com/json_new/getActivities.php)
 
 ## Technologies
 * Xcode 9
