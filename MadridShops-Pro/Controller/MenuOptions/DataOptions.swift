@@ -55,25 +55,28 @@ class DataOptions: UIViewController {
     }
     
     
-    
     @IBAction func downloadDataAgain(_ sender: Any) {
         let defaults = UserDefaults.standard
         defaults.set(false, forKey: "saved")
         defaults.synchronize()
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ShopCD")
-//        fetchRequest.returnsObjectsAsFaults = false
+        let shopFetchRequest: NSFetchRequest<ShopCD> = ShopCD.fetchRequest()
+        let activityFetchRequest: NSFetchRequest<ActivityCD> = ActivityCD.fetchRequest()
         
-        do
-        {
-            let results = try shopContext.fetch(fetchRequest)
-            for managedObject in results
-            {
-                let managedObjectData = managedObject as! NSManagedObject
-                shopContext.delete(managedObjectData)
+        do {
+            let shopResults = try shopContext.fetch(shopFetchRequest)
+            for managedObject in shopResults {
+                shopContext.delete(managedObject)
             }
-        } catch {
             
+            let activityResults = try activityContext.fetch(activityFetchRequest)
+            for managedObject in activityResults {
+                activityContext.delete(managedObject)
+            }
+            
+            try shopContext.save()
+        } catch {
+            print("💾💩 Error deleting cache.")
         }
         
         navigationController?.popToRootViewController(animated: true)

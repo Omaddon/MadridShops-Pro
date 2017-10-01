@@ -26,13 +26,10 @@ class CacheShopsInteractorCoreData: CacheShopsInteractorProtocol {
             try context.save()
             onSuccess(shops)
         } catch  {
-            
             if let myError = onError {
                 myError()
             }
-            
         }
-        
     }
     
     func execute(shops: Shops, context: NSManagedObjectContext, onSuccess: (Shops) -> Void) {

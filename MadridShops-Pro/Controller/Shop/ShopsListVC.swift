@@ -40,6 +40,7 @@ class ShopsListVC: UIViewController {
         
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueShopDetail" {
             let vc = segue.destination as! ShopDetailVC
